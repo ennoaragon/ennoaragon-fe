@@ -1,0 +1,27 @@
+.navbar {
+    top: 0;
+    min-width: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0 1em;
+}
+
+.navbar h4 {
+    margin: 0;
+}
+
+.navbar-content {
+    display: flex;
+    padding: 1em;
+}
+
+.navbar-content a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: none;
+    padding: 1em;
+}
