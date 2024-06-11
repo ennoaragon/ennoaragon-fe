@@ -7,7 +7,7 @@
     position: fixed;
     justify-content: space-between;
     flex-direction: row;
-    padding: 0 1em;
+    height: 50px;
 }
 
 .navbar h4 {
@@ -16,12 +16,12 @@
 
 .navbar-content {
     display: flex;
-    padding: 1em;
+    padding: 0 2em;
 }
 
 .navbar-content a {
     font-weight: 500;
-    color: #646cff;
-    text-decoration: none;
-    padding: 1em;
+    color: white;
+    text-decoration: underline;
+    padding: 0 1em;
 }

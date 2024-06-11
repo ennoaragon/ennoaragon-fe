@@ -3,7 +3,7 @@ import './Navbar.css'
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <div>
+      <div className="navbar-content">
         <h4>ennoaragon</h4>
       </div>
       <div className="navbar-content">

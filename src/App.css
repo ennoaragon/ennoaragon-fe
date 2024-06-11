@@ -5,8 +5,16 @@
     margin: 0 auto;
     text-align: center;
     width: 100vw;
-    padding: 1em;
 
+}
+.content { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    padding: 1em;
 }
 
 @keyframes logo-spin {
