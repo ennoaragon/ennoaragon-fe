@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,12 @@
     <title>Enno Aragon</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+      <h1>Enno Aragon</h1>
+      <h1>Hello World</h1>
+
+      {{ range .Films }}
+        <p> {{ .Title }} - {{ .Director}}</p>
+      {{ end }}
+
   </body>
 </html>
