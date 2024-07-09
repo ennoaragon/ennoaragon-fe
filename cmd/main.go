@@ -27,4 +27,15 @@ func main() {
     }
     http.HandleFunc("/", h1)
     log.Fatal(http.ListenAndServe(":8080", nil))
+
+
+    mux := http.NewServeMux()
+    mux.HandleFunc("/", handler.Home)
+
+    fs := http.FileServer(http.Dir("./internal/static"))
+    mux.Handle("/static/", http.StripPrefix("/static/", fs))
+
+    log.Println("Starting server on :8080")
+    err := http.ListenAndServe(":8080", mux)
+    log.Fatal(err)
 }
