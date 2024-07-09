@@ -15,7 +15,7 @@ func main() {
     fmt.Println("hello world")
 
     h1 := func(w http.ResponseWriter, r *http.Request) {
-        tmpl := template.Must(template.ParseFiles("index.html"))
+        tmpl := template.Must(template.ParseFiles("./public/index.html"))
         films := map[string][]Film{
             "Films": {
                 {Title: "Casablanca", Director: "Michael Curtiz"},
