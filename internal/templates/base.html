@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/static/css/output.css" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <title>Enno Aragon</title>
 </head>
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+<body class="bg-custom-background text-white min-w-full min-h-screen font-Lato leading-normal tracking-normal " onload="loadTheme()">
     {{ template "nav" . }}
-    <div class="container mx-auto mt-10">
-        {{ template "content" . }}
+    <div class="container mx-auto mt-50 top-50 ">
+        {{ template  "content" . }} 
     </div>
     {{ template "footer" . }}
+    <script  src="/static/js/themeModeSelector.js"  type="text/javascript"></script>
 </body>
 </html>
 
