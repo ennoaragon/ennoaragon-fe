@@ -7,5 +7,11 @@
   "scripts": {
     "build:css": "npx tailwindcss -i ./internal/static/css/tailwind.css -o ./internal/static/css/style.css --watch",
     "dev": "nodemon --exec go run ./cmd/main.go --signal SIGTERM"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "."
+    ],
+    "ext": "go,html,js,css,json"
   }
 }
