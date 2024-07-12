@@ -3,14 +3,17 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [
       './internal/templates/**/*.html',
+      './internal/templates/partials/**/*.html',
       './internal/static/js/**/*.js',
   ],
   darkMode: 'class',
   theme: {
    extend: {
      colors: {
-       primary: '#3E64FF',
+       primary: 'white',
        secondary: '#FF7F50',
+       'active-link': '#F0F0F0',
+       'custom-accent': '#1c282e',
        'custom-background': '#181818',
        'custom-gradiant': '#1c282e',
      },
@@ -22,9 +25,6 @@ module.exports = {
      fontFamily: {
         serif: ['serif'],
         Lato: ['Lato', ...defaultTheme.fontFamily.sans]
-     },
-     fontSize: {
-       '2xl': '12.5rem',
      },
    },
  },
