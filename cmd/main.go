@@ -23,6 +23,9 @@ func main() {
     mux.HandleFunc("/", handler.Home)
     mux.HandleFunc("/about", handler.About)
     mux.HandleFunc("/projects", handler.Projects)
+    mux.HandleFunc("/experience", handler.Experience)
+    //mux.NotFoundHandler = http.HandlerFunc(handler.NotFound404)
+    
     log.Println("Starting server on :8080")
     err := http.ListenAndServe(":8080", mux)
     log.Fatal(err)
