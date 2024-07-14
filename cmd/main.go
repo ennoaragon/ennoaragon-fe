@@ -20,6 +20,10 @@ func main() {
 
     staticFiles := http.FileServer(http.Dir("internal/static"))
     mux.Handle("/static/", http.StripPrefix("/static/", staticFiles))
+    // will need to remove this later
+    imageFiles := http.FileServer(http.Dir("assets"))
+    mux.Handle("/assets/carousel", http.StripPrefix("/assets/carousel", imageFiles))
+    mux.Handle("/assets/", http.StripPrefix("/assets/", imageFiles))
     mux.HandleFunc("/", handler.Home)
     mux.HandleFunc("/about", handler.About)
     mux.HandleFunc("/projects", handler.Projects)
