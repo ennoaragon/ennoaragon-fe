@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-    "github.com/a-h/templ"
+//    "github.com/a-h/templ"
 	"log"
 	"net/http"
     "ennoaragon/internal/handler"
@@ -23,7 +23,7 @@ func main() {
     imageFiles := http.FileServer(http.Dir("assets"))
     mux.Handle("/assets/carousel", http.StripPrefix("/assets/carousel", imageFiles))
     mux.Handle("/assets/", http.StripPrefix("/assets/", imageFiles))
-    mux.HandleFunc("/", templ.Handler(handler.getHome))
+    mux.HandleFunc("/", handler.NewHomeHandler().GetHome)
 //    mux.HandleFunc("/about", handler.About)
 //    mux.HandleFunc("/projects", handler.Projects)
 //    mux.HandleFunc("/experience", handler.Experience)

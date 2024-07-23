@@ -11,10 +11,10 @@ func NewHomeHandler() *HomeHandler {
     return &HomeHandler{}
 }
 
-func (h *HomeHandler) getHome(w http.ResponseWriter, r *http.Request) {
-    c := templates.home()
+func (h *HomeHandler) GetHome(w http.ResponseWriter, r *http.Request) {
+    c := templates.Home()
 
-    err := templates.base(c, "Enno Aragon").Render(r.Context(),w)
+    err := templates.Base(c, "Enno Aragon").Render(r.Context(),w)
     if err != nil {
         http.Error(w, "Home render failed ", http.StatusInternalServerError)
     }

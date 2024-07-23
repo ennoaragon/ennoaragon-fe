@@ -1,22 +1,14 @@
 package templates
 
-templ base(contents templ.Component, title string) { //<!DOCTYPE html> <html lang="en">
-//    <body class="bg-gradient-45 from-custom-background from-60% via-custom-gradiant via-70% to-custom-background to-80%  text-white min-w-full min-h-screen h-screen font-Lato leading-normal tracking-normal "  >
-//        {{ template "nav" . }}
-//        <main class="container min-w-full min-h-full h-full w-full relative pt-14">
-//            {{ template  "content" . }} 
-//        </main>
-//    </body>
-//</html>
+templ Base(contents templ.Component, title string) {
     <!DOCTYPE html>
     <html lang="en">
         @header(title)
         <body class="bg-gradient-45 from-custom-background from-60% via-custom-gradiant via-70% to-custom-background to-80%  text-white min-w-full min-h-screen h-screen font-Lato leading-normal tracking-normal "> 
-        templates.nav()
+        @Nav()
         <main class="container min-w-full min-h-full h-full w-full relative pt-14">
             @contents
         </main>
-    //		@footer()
         </body>
     </html>
 }

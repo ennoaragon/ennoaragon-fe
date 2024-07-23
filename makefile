@@ -1,21 +1,23 @@
-.PHONY: run build css clean
+.PHONY: tailwind-watch 
+tailwind-watch:
+	npx tailwindcss -i ./internal/static/css/tailwind.css -o ./internal/static/css/style.css --watch
 
-# Build the Go binary.
-build:
-    go build -o ennoaragon-fe ./cmd/main
+.PHONY: tailwind-build
+tailwind-build:
+	npx tailwindcss -i ./internal/static/css/tailwind.css -o ./internal/static/css/style.css --minify
 
-# Run the Go application.
-run: css build
-    ./ennoaragon-fe
+.PHONY: templ-generate
+templ-generate:
+	templ generate
 
-# Build CSS using Tailwind CLI.
-css:
-    npx tailwindcss -i ./internal/static/css/tailwind.css -o ./internal/static/css/style.css --minify
+.PHONY: templ-watch
+templ-watch:
+	templ generate --watch
 
-# Clean up the generated files.
-clean:
-    rm -f ennoaragon-fe
-    rm -f internal/static/css/style.css
+.PHONY: dev
+dev:
+	go build -o ./tmp/$(APP_NAME) ./cmd/main.go && air
 
-# Default target.
-all: run
+.PHONY: build 
+build: tailwind-build templ-generate
+	go build -o ./bin/ennoaragon-fe ./cmd/main.go
