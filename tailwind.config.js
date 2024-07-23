@@ -2,8 +2,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [
-      './internal/templates/**/*.html',
-      './internal/templates/partials/**/*.html',
+      './internal/templates/**/*.templ',
+      './internal/templates/partials/**/*.templ',
       './internal/static/js/**/*.js',
   ],
   darkMode: 'class',
