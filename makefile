@@ -1,10 +1,10 @@
 .PHONY: tailwind-watch 
 tailwind-watch:
-	npx tailwindcss -i ./internal/static/css/tailwind.css -o ./internal/static/css/style.css --watch
+	./tailwindcss -i ./internal/static/css/tailwind.css -o ./internal/static/css/style.css --watch
 
 .PHONY: tailwind-build
 tailwind-build:
-	npx tailwindcss -i ./internal/static/css/tailwind.css -o ./internal/static/css/style.css --minify
+	./tailwindcss -i ./internal/static/css/tailwind.css -o ./internal/static/css/style.css --minify
 
 .PHONY: templ-generate
 templ-generate:

@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme');
+//const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   content: [
       './internal/templates/**/*.templ',
-      './internal/templates/partials/**/*.templ',
       './internal/static/js/**/*.js',
   ],
   darkMode: 'class',
@@ -24,10 +23,13 @@ module.exports = {
       },
      fontFamily: {
         serif: ['serif'],
-        Lato: ['Lato', ...defaultTheme.fontFamily.sans]
+        Lato: ['Lato']
      },
    },
- },
-  plugins: [],
+  },
+  plugins:[
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ]
 }
 
