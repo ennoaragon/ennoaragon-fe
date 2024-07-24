@@ -16,7 +16,7 @@ templ-watch:
 
 .PHONY: dev
 dev:
-	go build -o ./tmp/$(APP_NAME) ./cmd/main.go && air
+	go build -o ./tmp/main ./cmd/main.go && air
 
 .PHONY: build 
 build: tailwind-build templ-generate

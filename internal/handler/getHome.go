@@ -11,7 +11,7 @@ func NewHomeHandler() *HomeHandler {
     return &HomeHandler{}
 }
 
-func (h *HomeHandler) GetHome(w http.ResponseWriter, r *http.Request) {
+func (h *HomeHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
     c := templates.Home()
 
     err := templates.Base(c, "Enno Aragon").Render(r.Context(),w)

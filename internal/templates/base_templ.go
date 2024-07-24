@@ -34,7 +34,15 @@ func Base(contents templ.Component, title string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<body class=\"bg-gradient-45 from-custom-background from-60% via-custom-gradiant via-70% to-custom-background to-80%  text-white min-w-full min-h-screen h-screen font-Lato leading-normal tracking-normal \">templates.nav()<main class=\"container min-w-full min-h-full h-full w-full relative pt-14\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<body class=\"bg-gradient-45 from-custom-background from-60% via-custom-gradiant via-70% to-custom-background to-80%  text-white min-w-full min-h-screen h-screen font-Lato leading-normal tracking-normal \">")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		templ_7745c5c3_Err = Nav().Render(ctx, templ_7745c5c3_Buffer)
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<main class=\"container min-w-full min-h-full h-full w-full relative pt-14\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
