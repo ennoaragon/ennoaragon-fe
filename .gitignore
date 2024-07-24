@@ -23,5 +23,5 @@ tailwindcss
 *.njsproj
 *.sln
 *.sw?
-tmp/
-tmp/*
+tmp/**/*
+tmp
