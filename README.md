@@ -1,4 +1,4 @@
-# GoTTH 
+# My portfolio website - GoTTH stack
 ## created using Golang Tailwindcss Templates and HTMX
 * Go - Backend using Gin or vanilla Go
 * Tailwind - CSS
