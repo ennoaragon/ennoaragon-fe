@@ -25,3 +25,4 @@ tailwindcss
 *.sw?
 tmp/**/*
 tmp
+tmp
