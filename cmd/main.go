@@ -28,9 +28,8 @@ func main() {
     mux.Handle("/static/", http.StripPrefix("/static/", staticFiles))
     // will need to remove this later
     imageFiles := http.FileServer(http.Dir("assets"))
-    mux.Handle("/assets/carousel", http.StripPrefix("/assets/carousel", imageFiles))
+    //mux.Handle("/assets/carousel", http.StripPrefix("/assets/carousel", imageFiles))
     mux.Handle("/assets/", http.StripPrefix("/assets/", imageFiles))
-    // this isn't real code just comment for people read
     //routes
     mux.HandleFunc("/", handler.NewHomeHandler().ServeHTTP)
     mux.HandleFunc("/about", handler.NewAbouthandler().ServeHTTP)

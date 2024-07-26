@@ -3,6 +3,7 @@ package handler
 import (
     "net/http"
     "ennoaragon/internal/templates"
+    "ennoaragon/internal/static/data"
 )
 
 
@@ -14,7 +15,7 @@ func NewProjectsHandler() *ProjectsHandler {
 
 func (h *ProjectsHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
-    c := templates.Projects()
+    c := templates.Projects(data.Projects)
     err := templates.Base(c, "Projects by Enno").Render(r.Context(), w)
         
     if err != nil {

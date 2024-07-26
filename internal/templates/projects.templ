@@ -1,14 +1,30 @@
 package templates
+
+import (
+    "ennoaragon/internal/static/data"
+)
+
+templ project (project data.Project) {
+    <div class="text-white
+        border-white box-border ">
+        <h1>{project.Title}</h1>
+        <p>{project.Description}</p>
+        <p>{project.Date}</p>
+        <div>
+            for _, techChip := range project.TechChips {
+                <span class="bg-white text-black">{techChip}</span>
+            }
+        </div>
+    </div>
+}
 // we will need to cylce through range of itmes that we can parse later
-templ Projects() {
-
-    <div class="flex min-w-full">
+templ Projects(projects [] data.Project) {
+    <div class="flex flex-col items-center min-w-full">
         <p class="text-8xl ">Projects</p>
-
-        <div class="text-white border-white box-border ">
-        <h1>Title</h1>
-        <p>Content</p>
-
+        <div class="text-white border-white box-border ">   
+            for _, p := range projects {
+                @project(p)
+            }
         </div>
     </div>
 }
