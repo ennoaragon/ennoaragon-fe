@@ -13,6 +13,8 @@ dist-ssr
 *.local
 tailwindcss
 
+.nvim
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -24,5 +26,4 @@ tailwindcss
 *.sln
 *.sw?
 tmp/**/*
-tmp
 tmp

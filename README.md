@@ -25,6 +25,9 @@ https://tailwindcss.com/blog/standalone-cli
 ### Templ
 https://templ.guide/
 
+### Apline JS
+For better interactivity, we use Alpine JS. It is a minimal framework for composing JavaScript behavior in your HTML. It is a great alternative to Vue.js or React.js for small projects.
+
 ### Targets:
 ```bash
 make tailwind-watch

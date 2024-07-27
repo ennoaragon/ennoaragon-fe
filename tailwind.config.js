@@ -13,7 +13,7 @@ module.exports = {
        secondary: '#FF7F50',
        'active-link': '#F0F0F0',
        'custom-accent': '#1c282e',
-       'custom-background': '#181818',
+       'custom-background': '#1b1b1b',
        'custom-gradiant': '#1c282e',
      },
     backgroundImage: {

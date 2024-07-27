@@ -8,6 +8,15 @@ package templates
 import "github.com/a-h/templ"
 import templruntime "github.com/a-h/templ/runtime"
 
+// <div class="min-w-fit max-w-[500px] w-full " >
+// <p class="text-8xl">Enno Aragon</p>
+// <p class="text-xl"> Software Engineer, Full Stack Developer, and App Developer</p>
+// <p class="text-lg mt-10">I am a software engineer with a passion for building
+// web applications and mobile apps. I have experience in building
+// full stack applications using React, Node.js, and MongoDB.
+// I have also built mobile apps using React Native and Flutter.
+// I am always looking for new opportunities to learn and grow as a developer.</p>
+// </div>
 func Home() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
@@ -26,7 +35,7 @@ func Home() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex flex-col justify-center items-center w-full h-full \"><p class=\"text-8xl\">Enno Aragon</p><div class=\"text-center mt-10 \"><p class=\"text-xl\">Software Engineer, Full Stack Developer, and App Developer</p></div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex flex-col items-center h-full mt-10\"><div class=\"text-left\"><p class=\"text-7xl\">Enno Aragon</p></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
