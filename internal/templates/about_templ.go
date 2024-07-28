@@ -32,7 +32,7 @@ func About(carousel []data.ImageData) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex flex-col items-center h-fit\"><div class=\"mt-10\"><video class=\"w-full h-[40vh] object-cover rounded-lg\" alt=\"Team victory\" controls autoplay muted loop><source src=\"/assets/jumbo_cam_heart.mp4\" type=\"video/mp4\" ng-if=\"option==&#39;video&#39;\"></video></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<style>\n        /* For Webkit-based browsers (Chrome, Safari and Opera) */\n        .scrollbar-hide::-webkit-scrollbar {\n            display: none;\n        }\n\n        /* For IE, Edge and Firefox */\n        .scrollbar-hide {\n            -ms-overflow-style: none;  /* IE and Edge */\n            scrollbar-width: none;  /* Firefox */\n        }\n    </style><div class=\"flex flex-col items-center max-h-screen overflow-auto scrollbar-hide\"><div class=\"mt-10\"><video class=\"w-full h-[40vh] object-cover rounded-lg\" alt=\"Team victory\" controls autoplay muted loop><source src=\"/assets/jumbo_cam_heart.mp4\" type=\"video/mp4\" ng-if=\"option==&#39;video&#39;\"></video></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

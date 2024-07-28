@@ -11,11 +11,15 @@ module.exports = {
      colors: {
        primary: 'white',
        secondary: '#FF7F50',
+       'custom-gray': '#c7c5c5',
        'active-link': '#F0F0F0',
        'custom-accent': '#1c282e',
        'custom-background': '#1b1b1b',
        'custom-gradiant': '#1c282e',
      },
+    width: {
+      'home-max': '600px', // Now you can use class="w-custom"
+    },
     backgroundImage: {
         'gradient-45': 'linear-gradient(60deg, var(--tw-gradient-stops))',
         'gradient-double45': 'linear-gradient(150deg, var(--tw-gradient-stops)), linear-gradient(240deg, var(--tw-gradient-stops))',

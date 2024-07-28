@@ -7,7 +7,19 @@ import (
 
 //<img src="/assets/Team_victory.webp" class="w-full h-[40vh] object-cover rounded-lg" alt="Team victory">
 templ About(carousel [] data.ImageData) {
-    <div class="flex flex-col items-center h-fit">
+    <style>
+        /* For Webkit-based browsers (Chrome, Safari and Opera) */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* For IE, Edge and Firefox */
+        .scrollbar-hide {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+    <div class="flex flex-col items-center max-h-screen overflow-auto scrollbar-hide">
         <div class="mt-10">
             <video  class="w-full h-[40vh] object-cover rounded-lg" alt="Team victory" controls autoplay muted loop>
                 <source src="/assets/jumbo_cam_heart.mp4" type="video/mp4" ng-if="option=='video'">
