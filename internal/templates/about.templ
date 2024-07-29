@@ -19,23 +19,28 @@ templ About(carousel [] data.ImageData) {
             scrollbar-width: none;  /* Firefox */
         }
     </style>
-    <div class="flex flex-col items-center max-h-screen overflow-auto scrollbar-hide">
+    <div class="relative flex flex-col items-center max-h-fit h-fit overflow-auto scrollbar-hide">
         <div class="mt-10">
             <video  class="w-full h-[40vh] object-cover rounded-lg" alt="Team victory" controls autoplay muted loop>
                 <source src="/assets/jumbo_cam_heart.mp4" type="video/mp4" ng-if="option=='video'">
             </video>
         </div>
-        @partials.Slider(carousel)
-        <div class="text-left  max-w-[60%]">
+        <div class="mt-10">
+            @partials.Slider(carousel)
+        </div>
+        <div class="text-left max-w-[60%]">
             <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
             <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
         </div>
-
-        <div class="text-left  max-w-[60%]">
+        <div class="text-left max-w-[60%]">
             <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
             <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
         </div>
-        <div class="text-left  max-w-[60%]">
+        <div class="text-left max-w-[60%]">
+            <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
+            <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
+        </div>
+        <div class="text-left max-w-[60%]">
             <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
             <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
         </div>
