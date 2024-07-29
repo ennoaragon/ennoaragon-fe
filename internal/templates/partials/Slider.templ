@@ -84,13 +84,11 @@ templ Slider(images []data.ImageData) {
         }
         window.slider = slider
     </script>
-    <div id="default-carousel" class="relative w-full max-w-[50%]" >
+    <div id="default-carousel" class="relative w-full" >
         <!-- Carousel wrapper -->
         <div class="relative h-[50vh] overflow-hidden rounded-lg md:h-[30vh] lg:h-[40vh] xl:h-[50vh] 2xl:h-[50vh]" 
             x-data="slider"
-            >
-            
-
+            >       
             <template x-for="slide in slides" :key="slide.Id">
                 @slide()
             </template>

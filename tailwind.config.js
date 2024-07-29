@@ -16,9 +16,10 @@ module.exports = {
        'custom-accent': '#1c282e',
        'custom-background': '#1b1b1b',
        'custom-gradiant': '#1c282e',
+       'custom-purple': '#6A0DAD',
      },
     width: {
-      'home-max': '600px', // Now you can use class="w-custom"
+      'text-width-max': '600px', // Now you can use class="w-custom"
     },
     backgroundImage: {
         'gradient-45': 'linear-gradient(60deg, var(--tw-gradient-stops))',

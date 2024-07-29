@@ -46,7 +46,7 @@ func Base(contents templ.Component, title string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<main class=\"container min-w-full min-h-full h-full w-full relative pt-14\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<main class=\"container flex flex-1 flex-col justify-between min-w-full min-h-full h-full w-full relative pt-14 max-h-fit overflow-auto scrollbar-hide\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

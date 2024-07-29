@@ -4,6 +4,7 @@ import (
     "os"
     "log"
     "path/filepath"
+    "strings"
 )
 
 type ImageData struct {
@@ -35,9 +36,11 @@ func init() {
     count := 0
     for _, file := range files {
         if filepath.Ext(file.Name()) == ".webp" {
+            title := strings.ReplaceAll(file.Name(),"_", " ")
+            title = strings.ReplaceAll(title, ".webp", "") 
             image := ImageData{
                 Id: count,
-                Title:    file.Name(),
+                Title:   title,
                 LocalSrc: filepath.Join(imgPath, file.Name()),
                 RemoteSrc: filepath.Join("https://storage.googleapis.com/ea-frontend-assets", file.Name()),
             }

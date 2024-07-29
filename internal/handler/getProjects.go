@@ -15,7 +15,7 @@ func NewProjectsHandler() *ProjectsHandler {
 
 func (h *ProjectsHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
-    c := templates.Projects(data.Projects)
+    c := templates.Projects(data.Projects, data.Experiences)
     err := templates.Base(c, "Projects by Enno").Render(r.Context(), w)
         
     if err != nil {

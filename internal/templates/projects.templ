@@ -18,13 +18,23 @@ templ project (project data.Project) {
     </div>
 }
 // we will need to cylce through range of itmes that we can parse later
-templ Projects(projects [] data.Project) {
-    <div class="flex flex-col items-center min-w-full">
-        <p class="text-8xl ">Projects</p>
-        <div class="text-white border-white box-border ">   
-            for _, p := range projects {
-                @project(p)
-            }
+templ Projects(projects [] data.Project, experinces [] data.Project) {
+    <div class="grid grid-cols-2 gap-2 p-2 items-center min-w-full min-h-full h-full w-full">
+        <div class="flex flex-col justify-center items-center">
+            <p class="text-8xl ">Projects</p>
+            <div class="text-white border-white box-border ">   
+                for _, p := range projects {
+                    @project(p)
+                }
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <p class="text-8xl ">Experiences</p>
+            <div class="text-white border-white box-border ">   
+                for _, p := range experinces {
+                    @project(p)
+                }
+            </div>
         </div>
     </div>
 }
