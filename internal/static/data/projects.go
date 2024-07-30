@@ -1,11 +1,12 @@
 package data
 
 import (
-    "encoding/json"
-//    "time"
-    "os"
-    "log"
-    "path/filepath"
+	"encoding/json"
+	//    "time"
+	"log"
+	"os"
+	"path/filepath"
+	"github.com/a-h/templ"
 )
 
 type TechChip struct{
@@ -18,7 +19,7 @@ type Project struct{
     Description string `json:"description"` 
     ImageUrl string `json:"image_url"`
     TechChips []string `json:"tech_chips"`
-    ExtUrl string `json:"external_url"`
+    ExtUrl templ.SafeURL `json:"external_url"`
  }
 
 var Projects []Project

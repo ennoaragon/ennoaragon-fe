@@ -15,6 +15,7 @@ module.exports = {
        'active-link': '#F0F0F0',
        'custom-accent': '#1c282e',
        'custom-background': '#1b1b1b',
+       'custom-background-lighter': '#363636',
        'custom-gradiant': '#1c282e',
        'custom-purple': '#6A0DAD',
      },
