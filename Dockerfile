@@ -1,24 +1,21 @@
-# Start from the official Golang 1.22.2 image from the Docker Hub
-FROM golang:1.22 as builder
+FROM golang:1.22-alpine
 
-# Set the Current Working Directory inside the container
+# Set destination for COPY
 WORKDIR /app
 
-# Copy go mod and sum files
-COPY go.mod go.sum ./
+COPY . /app
+# Download Go modules
+COPY go.mod .
+COPY go.sum .
 
-# Download all dependencies. Dependencies will be cached if the go.mod and go.sum files are not changed
+RUN ls -la /app
+
 RUN go mod download
 
-# Copy the source from the current directory to the Working Directory inside the container
-COPY . .
+RUN go build -o main .
 
-# Build the Go app
-RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o main .
-
-# Expose port 8080 to the outside world
+# Make port 8080 available to the world outside this container
 EXPOSE 8080
 
-# Command to run the executable
+# Run the binary program produced by `go install`
 CMD ["./main"]
-
