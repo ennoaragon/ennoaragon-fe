@@ -3,7 +3,7 @@ FROM golang:1.22-alpine
 # Set destination for COPY
 WORKDIR /app
 
-COPY . /app
+COPY . .
 # Download Go modules
 COPY go.mod .
 COPY go.sum .
@@ -12,7 +12,7 @@ RUN ls -la /app
 
 RUN go mod download
 
-RUN go build -o main .
+RUN go build -o main /app/cmd/main.go
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
