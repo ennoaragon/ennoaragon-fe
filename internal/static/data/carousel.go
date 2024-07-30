@@ -1,17 +1,18 @@
 package data
 
 import (
-    "os"
-    "log"
-    "path/filepath"
-    "strings"
+	"encoding/json"
+	"fmt"
+	"log"
+	"os"
+	"path/filepath"
 )
 
 type ImageData struct {
-    Id int
-    Title    string
-    LocalSrc string
-    RemoteSrc   string
+    Id int `json:"Id"`
+    Title    string `json:"Title"`
+    LocalSrc string `json:"LocalSrc"`
+    RemoteSrc  string `json:"RemoteSrc"`
 }
 
 type CarouselItems struct {
@@ -24,46 +25,68 @@ var CarouselImages []ImageData
 var Carousel CarouselItems
 
 func init() {
-    
-    if os.Getenv("ENV") == "development" {
-        LocalCarouselImages()
-        return
-    }
+    data, err := os.ReadFile(filepath.Join("internal/static/data/", "carousel.json"))
 
-    // Future make api call to get all files names in the storage bucket  
-    print("Not implemented yet")
-}
-
-func LocalCarouselImages() {
-
-    // We will need to change path when we deploy to GCP
-    imgPath := "assets"
-
-    files, err := os.ReadDir(imgPath)
     if err != nil {
         log.Fatal(err)
     }
 
-    count := 0
-    for _, file := range files {
-        if filepath.Ext(file.Name()) == ".webp" {
-            title := strings.ReplaceAll(file.Name(),"_", " ")
-            title = strings.ReplaceAll(title, ".webp", "") 
-            image := ImageData{
-                Id: count,
-                Title:   title,
-                LocalSrc: filepath.Join(imgPath, file.Name()),
-                RemoteSrc: filepath.Join("https://storage.googleapis.com/ea-frontend-assets", file.Name()),
-            }
-            count++
-            CarouselImages = append(CarouselImages, image)
-        }
+    if err := json.Unmarshal(data, &CarouselImages); err != nil {
+        fmt.Println("Error parsing json", err)
+        log.Fatal(err) 
     }
 
-    Carousel = CarouselItems{
-        Size: len(CarouselImages),
-        Images: CarouselImages,
-    }
-
-    print(CarouselImages)
+//    if os.Getenv("ENV") == "production" {
+//        // Future make api call to get all files names in the storage bucket  
+//        print("Not implemented yet")
+//
+//        return
+//    }
+//
+//    LocalCarouselImages()
 }
+
+//func LocalCarouselImages() {
+//
+//    // We will need to change path when we deploy to GCP
+//    imgPath := "assets"
+//
+//    files, err := os.ReadDir(imgPath)
+//    if err != nil {
+//        log.Fatal(err)
+//    }
+//
+//    for _, file := range files {
+//        count := 0
+//        if filepath.Ext(file.Name()) == ".webp" {
+//            title := strings.ReplaceAll(file.Name(),"_", " ")
+//            title = strings.ReplaceAll(title, ".webp", "") 
+//            image := ImageData{
+//                Id: count,
+//                Title:   title,
+//                LocalSrc: filepath.Join(imgPath, file.Name()),
+//                RemoteSrc: filepath.Join("https://storage.googleapis.com/ea-frontend-assets", file.Name()),
+//            }
+//            count++
+//            CarouselImages = append(CarouselImages, image)
+//        }
+//    }
+//
+//    if len(CarouselImages) > 0 {
+//        //create the json file for this
+//        jsonData, err := json.Marshal(CarouselImages)
+//        if err != nil {
+//            log.Fatal(err)
+//        }   
+//
+//        // write to file
+//        os.WriteFile("/internal/static/data/testing.json", jsonData, 0644)
+//
+//    } 
+////    Carousel = CarouselItems{
+////        Size: len(CarouselImages),
+////        Images: CarouselImages,
+////    }
+//
+//    print(CarouselImages)
+//}

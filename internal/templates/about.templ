@@ -7,12 +7,12 @@ import (
 
 //<img src="/assets/Team_victory.webp" class="w-full h-[40vh] object-cover rounded-lg" alt="Team victory">
 //<div class="relative flex flex-col items-center">
-templ About(carousel [] data.ImageData) {
+templ About(videoUrl string,carousel [] data.ImageData, production bool) {
     <div class="grid grid-cols-2 gap-2">
         <div class="flex flex-col items-center w-full">
             <div class="px-8 mb-8">
                 <video class="object-cover rounded-lg" alt="Team victory" controls autoplay muted loop>
-                <source src="/assets/jumbo_cam_heart.mp4" type="video/mp4" ng-if="option=='video'">
+                <source src={videoUrl } type="video/mp4" ng-if="option=='video'">
                 </video>
             </div>
             <div class="text-left max-w-text-width-max w-text-width-max">
@@ -45,7 +45,7 @@ templ About(carousel [] data.ImageData) {
             </div>
         </div>
         <div class="w-full ">
-            @partials.PhotographyGrid(carousel)
+            @partials.PhotographyGrid(carousel, production)
         </div>
     </div>
 }

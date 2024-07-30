@@ -2,11 +2,11 @@ package main
 
 import (
 	"fmt"
-//    "github.com/a-h/templ"
 	"log"
 	"net/http"
     "ennoaragon/internal/handler"
     "os"
+    "github.com/joho/godotenv"
 )
 type Film struct {
     Title string
@@ -20,6 +20,10 @@ func init() {
 }
 
 func main() {
+    errEnv := godotenv.Load()
+    if errEnv != nil {
+        log.Fatal("Error loading .env file")
+    }
     fmt.Println("hello world")
 
     mux := http.NewServeMux()
