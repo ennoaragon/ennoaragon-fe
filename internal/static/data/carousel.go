@@ -24,6 +24,17 @@ var CarouselImages []ImageData
 var Carousel CarouselItems
 
 func init() {
+    
+    if os.Getenv("ENV") == "development" {
+        LocalCarouselImages()
+        return
+    }
+
+    // Future make api call to get all files names in the storage bucket  
+    print("Not implemented yet")
+}
+
+func LocalCarouselImages() {
 
     // We will need to change path when we deploy to GCP
     imgPath := "assets"

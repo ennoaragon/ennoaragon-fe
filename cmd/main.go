@@ -16,7 +16,7 @@ type Film struct {
 var Environment = "development"
 
 func init() {
-	os.Setenv("env", Environment)
+    Environment = os.Getenv("env")
 }
 
 func main() {

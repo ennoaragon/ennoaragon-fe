@@ -27,6 +27,8 @@ var Experiences []Project
 
 func init() {
    // Open json file parse information into Projects  st
+//    env := os.Getenv("ENV")
+
     data, err := os.ReadFile(filepath.Join("internal/static/data/", "projects.json"))
     expData, exErr := os.ReadFile(filepath.Join("internal/static/data/", "experiences.json"))
 

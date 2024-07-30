@@ -3,7 +3,9 @@ FROM golang:1.22-alpine
 # Set destination for COPY
 WORKDIR /app
 
-COPY . .
+# Take in just the go files for the docker file
+COPY *.go .
+
 # Download Go modules
 COPY go.mod .
 COPY go.sum .
