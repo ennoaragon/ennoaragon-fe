@@ -1,12 +1,12 @@
 package data
 
-import (
-	"encoding/json"
-	"fmt"
-	"log"
-	"os"
-	"path/filepath"
-)
+//import (
+//	"encoding/json"
+//	"fmt"
+//	"log"
+//	"os"
+//	"path/filepath"
+//)
 
 type ImageData struct {
     Id int `json:"Id"`
@@ -25,16 +25,16 @@ var CarouselImages []ImageData
 var Carousel CarouselItems
 
 func init() {
-    data, err := os.ReadFile(filepath.Join("internal/static/data/", "carousel.json"))
-
-    if err != nil {
-        log.Fatal(err)
-    }
-
-    if err := json.Unmarshal(data, &CarouselImages); err != nil {
-        fmt.Println("Error parsing json", err)
-        log.Fatal(err) 
-    }
+//    data, err := os.ReadFile(filepath.Join("internal/static/data/", "carousel.json"))
+//
+//    if err != nil {
+//        log.Fatal(err)
+//    }
+//
+//    if err := json.Unmarshal(data, &CarouselImages); err != nil {
+//        fmt.Println("Error parsing json", err)
+//        log.Fatal(err) 
+//    }
 
 //    if os.Getenv("ENV") == "production" {
 //        // Future make api call to get all files names in the storage bucket  
