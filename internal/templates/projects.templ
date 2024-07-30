@@ -9,16 +9,18 @@ templ project (project data.Project) {
         hover:border-secondary hover:box-border hover:border-2 hover:bg-custom-background-lighter
         hover:bg-opacity-30 max-w-text-width-max">
         <div class="p-2">
-            <p class="text-xl my-2">{project.Title}</p>
+            <div class="flex flex-1 justify-between w-full ">
+                <p class="text-xl my-2">{project.Title}</p>
+                if project.ExtUrl != "" {
+                    <a href={project.ExtUrl} class="my-2 text-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                    </a>
+                }
+            </div>
             <p class="my-2">{project.Description}</p>
             <p class="my-2">{project.Date}</p>
-            if project.ExtUrl != "" {
-                <a href={project.ExtUrl} class="my-2 text-blue-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                    </svg>
-                </a>
-            }
             <div class="flex w-full flex-wrap" >
                 for _, techChip := range project.TechChips {
                     <div class="bg-secondary bg-opacity-40 text-black rounded-md mr-2 p-1">
@@ -29,20 +31,19 @@ templ project (project data.Project) {
         </div>
     </div>
 }
+//<div class="flex flex-col w-full">
+//<p class="text-8xl text-center">Experiences</p>
+//<div class="flex flex-col text-white justify-center items-center">   
+//for _, p := range experinces {
+//    @project(p)
+//}
+//
+//</div>
+//</div>
 // we will need to cylce through range of itmes that we can parse later
 templ Projects(projects [] data.Project, experinces [] data.Project) {
-    <div class="grid grid-cols-2 gap-2 p-2 min-w-full w-full">
+    <div class="grid grid-cols-1 gap-2 p-2 min-w-full w-full">
         <div class="flex flex-col w-full">
-            <p class="text-8xl text-center">Experiences</p>
-            <div class="flex flex-col text-white justify-center items-center">   
-                for _, p := range experinces {
-                    @project(p)
-                }
-
-            </div>
-        </div>
-        <div class="flex flex-col w-full">
-            <p class="text-8xl text-center">Projects</p>
             <div class="flex flex-col text-white justify-center items-center">   
                 for _, p := range projects {
                     @project(p)

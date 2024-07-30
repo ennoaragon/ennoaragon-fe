@@ -1,42 +1,56 @@
 [
     {
+        "id": 0,
+        "title": "Team fire cracker",
+        "description": "Join an adventurous cat and its AI companion on a secret mission from Earth in this 2.5D platformer. The game aims to deliver an immersive experience, utilizing GPT-4 agents to craft engaging and interactive conversations between the characters, enhancing the overall gameplay and narrative depth.",
+        "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
+        "tech_chips": ["Unreal Engine 5", "c++", "Chat GPT", "python"],
+        "created_at": "2021-09-01",
+        "external_url": ""
+    },
+    {
         "id": 1,
         "title": "Joy Tap",
-        "description": "A simple app that helps you keep track of your mood and emotions.",
+        "description": "The product is a stress-relief desktop application with a video game window overlay. With a tap of a key, the application will play a video overlay during gameplay intermissions; press again to minimize. The lightweight Application is built using",
         "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
-        "tech_chips": ["React Native", "Firebase", "Redux"],
-        "created_at": "2021-09-01"
+        "tech_chips": ["Svelte", "Tauri", "Rust", "Tailwindcss", "GCP", "GO"],
+        "created_at": "2021-09-01",
+        "external_url": ""
     }, 
     {
         "id": 2,
-        "title": "Joy Tap",
-        "description": "A simple app that helps you keep track of your mood and emotions.",
+        "title": "Naoux",
+        "description": "Led the team by designing and developing a clothing store using Agile/Scrum principles with a team of three members. Developed the backend using third-party services to fulfill physical item shipments. Created an SMTP service for order placements",
         "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
-        "tech_chips": ["React Native", "Firebase", "Redux"],
-        "created_at": "2021-09-01"
+        "tech_chips": ["React","Redux", "Firebase", "Express", "Material UI", "Stripe" ],
+        "created_at": "2021-09-01",
+        "external_url": "https://www.naoux.co/"
     },
     {
         "id": 3,
-        "title": "Joy Tap",
-        "description": "A simple app that helps you keep track of your mood and emotions.",
+        "title": "The Tavern",
+        "description": "Developed interactive tools catering to diverse role-playing needs, enabling users to save documents, information, and images to NoSQL databases. Implemented real-time item saving and display alongside an interactive map system for coordinating information.",
         "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
-        "tech_chips": ["React Native", "Firebase", "Redux"],
-        "created_at": "2021-09-01"
+        "tech_chips": ["React","Redux", "Firebase", "Express", "Material UI", "Stripe" ],
+        "created_at": "2021-09-01",
+        "external_url": "https://www.thetavern.io/"
     },
     {
         "id": 4,
-        "title": "Joy Tap",
-        "description": "A simple app that helps you keep track of your mood and emotions.",
+        "title": "DnD Discord Bot",
+        "description": "Developed with Python and pytmi before Discord's native soundboard feature, this bot allows users to manage and switch between multiple playlists seamlessly. It also includes a custom soundboard for DMs, offering an enhanced interactive experience for gaming sessions.",
         "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
-        "tech_chips": ["React Native", "Firebase", "Redux"],
-        "created_at": "2021-09-01"
+        "tech_chips": ["Python", "pytmi", "FFmpeg", "Discord"],
+        "created_at": "2021-09-01",
+        "external_url": ""
     },
     {
         "id": 5,
-        "title": "Joy Tap",
-        "description": "A simple app that helps you keep track of your mood and emotions.",
+        "title": "Twitch Redemption LED Display",
+        "description": "This project integrates an Arduino with a Grid LED to create dynamic animations and visual displays for Twitch chat redemptions. Utilizing the tmi.js library, the system reads chat interactions and processes redemptions to display user-created images in real-time via a webcam. The result is a visually engaging experience that enhances viewer interaction with custom animations and stills.",
         "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
-        "tech_chips": ["React Native", "Firebase", "Redux"],
-        "created_at": "2021-09-01"
+        "tech_chips": ["javascript", "tmi.js", "Arduino", "Twitch", "c++"],
+        "created_at": "2021-09-01",
+        "external_url": ""
     }
 ]
