@@ -1,0 +1,116 @@
+[
+  {
+    "Id": 0,
+    "Title": "Bee Yellow Flowers",
+    "LocalSrc": "assets/Bee_Yellow_Flowers.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Bee_Yellow_Flowers.webp"
+  },
+  {
+    "Id": 1,
+    "Title": "Forgotten stream",
+    "LocalSrc": "assets/Forgotten_stream.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Forgotten_stream.webp"
+  },
+  {
+    "Id": 2,
+    "Title": "Good morning Mirror Lake",
+    "LocalSrc": "assets/Good_morning_Mirror_Lake.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Good_morning_Mirror_Lake.webp"
+  },
+  {
+    "Id": 3,
+    "Title": "Greens and Mt Hood",
+    "LocalSrc": "assets/Greens_and_Mt_Hood.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Greens_and_Mt_Hood.webp"
+  },
+  {
+    "Id": 4,
+    "Title": "Incredible Colors",
+    "LocalSrc": "assets/Incredible_Colors.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Incredible_Colors.webp"
+  },
+  {
+    "Id": 5,
+    "Title": "Mirror Lake Morning winter",
+    "LocalSrc": "assets/Mirror_Lake_Morning_winter.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Mirror_Lake_Morning_winter.webp"
+  },
+  {
+    "Id": 6,
+    "Title": "Mirror Lake Morning winter 3",
+    "LocalSrc": "assets/Mirror_Lake_Morning_winter_3.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Mirror_Lake_Morning_winter_3.webp"
+  },
+  {
+    "Id": 7,
+    "Title": "Mt hood Early morning",
+    "LocalSrc": "assets/Mt_hood_Early_morning.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Mt_hood_Early_morning.webp"
+  },
+  {
+    "Id": 8,
+    "Title": "Mt throw hand2",
+    "LocalSrc": "assets/Mt_throw_hand2.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Mt_throw_hand2.webp"
+  },
+  {
+    "Id": 9,
+    "Title": "Pame",
+    "LocalSrc": "assets/Pame.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Pame.webp"
+  },
+  {
+    "Id": 10,
+    "Title": "Panther Falls",
+    "LocalSrc": "assets/Panther_Falls.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Panther_Falls.webp"
+  },
+  {
+    "Id": 11,
+    "Title": "Red and Green",
+    "LocalSrc": "assets/Red_and_Green.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Red_and_Green.webp"
+  },
+  {
+    "Id": 12,
+    "Title": "StoneHenge Front",
+    "LocalSrc": "assets/StoneHenge_Front.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/StoneHenge_Front.webp"
+  },
+  {
+    "Id": 13,
+    "Title": "Sunset craterlake",
+    "LocalSrc": "assets/Sunset_craterlake.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Sunset_craterlake.webp"
+  },
+  {
+    "Id": 14,
+    "Title": "Team victory",
+    "LocalSrc": "assets/Team_victory.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Team_victory.webp"
+  },
+  {
+    "Id": 15,
+    "Title": "london bridge clean",
+    "LocalSrc": "assets/london_bridge_clean.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/london_bridge_clean.webp"
+  },
+  {
+    "Id": 16,
+    "Title": "mama w-babies 4 1",
+    "LocalSrc": "assets/mama_w-babies_4_1.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/mama_w-babies_4_1.webp"
+  },
+  {
+    "Id": 17,
+    "Title": "purp in the skies-3",
+    "LocalSrc": "assets/purp_in_the_skies-3.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/purp_in_the_skies-3.webp"
+  },
+  {
+    "Id": 18,
+    "Title": "Shilin Night Market",
+    "LocalSrc": "assets/shilin-night-market.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/shilin-night-market.webp"
+  }
+]

@@ -1,30 +1,62 @@
-# React + TypeScript + Vite
+# My portfolio website - GoTTH stack
+## created using Golang Tailwindcss Templates and HTMX
+* Go - Backend using Gin or vanilla Go
+* Tailwind - CSS
+* Templ - Templating
+* HTMX - Interactivity
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Development 
+```make dev```
 
-Currently, two official plugins are available:
+## Production
+* TODO: Dockerfile is provided for containerization
+* TODO: create a CI/CD pipeline and ENV vars
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
 
-## Expanding the ESLint configuration
+### Air
+* Air is required for hot reloading used in 
+** https://github.com/air-verse/air
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Tailwind
+To generate the Tailwind style sheet, we use the Tailwind binary. To get started with TailWind CSS, make sure you have the correct binary in the root directory. follow the instructions in this guide. Make sure you download the correct binary for your operating system.
+https://tailwindcss.com/blog/standalone-cli
 
-- Configure the top-level `parserOptions` property like this:
+### Templ
+https://templ.guide/
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Apline JS
+For better interactivity, we use Alpine JS. It is a minimal framework for composing JavaScript behavior in your HTML. It is a great alternative to Vue.js or React.js for small projects.
+
+### Targets:
+```bash
+make tailwind-watch
 ```
+This target watches the ./static/css/input.css file and automatically rebuilds the Tailwind CSS styles whenever changes are detected.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```
+make tailwind-build
+```
+This target minifies the Tailwind CSS styles by running the tailwindcss command.
+
+```
+make templ-watch
+```
+This target watches for changes to *.templ files and automatically generates them.
+
+
+```
+make templ-generate
+```
+This target generates templates using the templ command.
+
+
+```
+make dev
+```
+This target runs the development server using Air, which helps in hot-reloading your Go application during development.
+
+```
+make build
+```
+This target orchestrates the building process by executing the tailwind-build, templ-generate, and go build commands sequentially. It creates the binary output in the ./bin/ directory.

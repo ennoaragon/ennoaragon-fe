@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Joy Tap",
+        "description": "A simple app that helps you keep track of your mood and emotions.",
+        "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
+        "tech_chips": ["React Native", "Firebase", "Redux"],
+        "created_at": "2021-09-01",
+        "external_url": ""
+    }, 
+    {
+        "id": 2,
+        "title": "Joy Tap",
+        "description": "A simple app that helps you keep track of your mood and emotions.",
+        "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
+        "tech_chips": ["React Native", "Firebase", "Redux"],
+        "created_at": "2021-09-01"
+    },
+    {
+        "id": 3,
+        "title": "Joy Tap",
+        "description": "A simple app that helps you keep track of your mood and emotions.",
+        "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
+        "tech_chips": ["React Native", "Firebase", "Redux"],
+        "created_at": "2021-09-01"
+    },
+    {
+        "id": 4,
+        "title": "Joy Tap",
+        "description": "A simple app that helps you keep track of your mood and emotions.",
+        "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
+        "tech_chips": ["React Native", "Firebase", "Redux"],
+        "created_at": "2021-09-01"
+    },
+    {
+        "id": 5,
+        "title": "Joy Tap",
+        "description": "A simple app that helps you keep track of your mood and emotions.",
+        "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
+        "tech_chips": ["React Native", "Firebase", "Redux"],
+        "created_at": "2021-09-01"
+    }
+]
+

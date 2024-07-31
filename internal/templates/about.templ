@@ -1,0 +1,52 @@
+package templates
+
+import (
+    "ennoaragon/internal/static/data"
+    "ennoaragon/internal/templates/partials"
+)
+
+//<img src="/assets/Team_victory.webp" class="w-full h-[40vh] object-cover rounded-lg" alt="Team victory">
+//<div class="relative flex flex-col items-center">
+templ About(videoUrl string, carousel []*data.ImageData, production bool) {
+    <div class="grid grid-cols-2 gap-2">
+        <div class="flex flex-col items-center w-full">
+            <div class="px-8 mb-8">
+                <video class="object-cover rounded-lg" alt="Team victory" controls autoplay muted loop>
+                <source src={videoUrl } type="video/mp4" ng-if="option=='video'">
+                </video>
+            </div>
+            <div class="text-left max-w-text-width-max w-text-width-max">
+                <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
+                <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
+            </div>
+            <div class="text-left max-w-text-width-max w-text-width-max my-4">
+                <p class="text-xl mb-4">🎮Paladins Premier Player Accomplishments</p>
+                <ul class="text-base">
+                    <li class="text-base">🏆1st Paladins Summer Premier 2017 
+                        World Champion</li>
+                    <li>🏆1st 2018 PPL Summer Finals</li> 
+                    <li>🥈2nd 2018 PPL Spring Finals</li>
+                    <li>🥈2nd 2017 PPL Fall Finals</li>
+                    <li>🥇1st 5x Champion Regional PPL split 2017-2018</li>
+                    <li class="text-base">🥉3rd Esports Superstars: Paladins 2018</li>
+                </ul>
+            </div>
+            <div class="text-left max-w-text-width-max w-text-width-max">
+                <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
+                <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
+            </div>
+            <div class="text-left max-w-text-width-max w-text-width-max">
+                <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
+                <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
+            </div>
+            <div class="text-left max-w-text-width-max w-text-width-max">
+                <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
+                <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
+            </div>
+        </div>
+        <div class="w-full ">
+            @partials.PhotographyGrid(carousel, production)
+        </div>
+    </div>
+}
+//@partials.Slider(carousel)

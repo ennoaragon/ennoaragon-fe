@@ -1,0 +1,9 @@
+*.templ
+/tmp
+tmp/
+/bin
+bin
+bin/*
+*.jpg
+*.webp
+*.png
