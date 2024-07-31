@@ -21,8 +21,8 @@ type Project struct{
     ExtUrl templ.SafeURL `json:"external_url"`
  }
 
-var Projects []Project
-var Experiences []Project
+var Projects [] *Project
+var Experiences [] *Project
 
 func init() {
     data, err := os.ReadFile(filepath.Join("internal/static/data/", "projects.json"))

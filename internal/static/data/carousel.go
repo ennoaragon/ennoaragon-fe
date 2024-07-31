@@ -19,7 +19,7 @@ type CarouselItems struct {
     Size int
     Images []ImageData
 }
-var CarouselImages []ImageData
+var CarouselImages []*ImageData
 // build a carousel component for templ consumption
 
 var Carousel CarouselItems

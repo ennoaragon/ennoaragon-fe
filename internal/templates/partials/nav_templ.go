@@ -164,7 +164,7 @@ func twitterComButton() templ.Component {
 	})
 }
 
-// <a class="nav-link hover:text-secondary text-xl " href="/experience"projects class="text-white text-lg">Experience</a>
+// <a class="nav-link hover:text-custom-accent-light text-xl " href="/experience"projects class="text-white text-lg">Experience</a>
 // Lets add github, linkedin, twitter, instagram, to the list of items required to finish navbar
 // these items will sit in the center of hte project
 func Nav() templ.Component {
@@ -230,7 +230,7 @@ func Nav() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></div><div id=\"nav-links\" class=\"flex items-center space-x-10\"><a class=\"nav-link hover:text-secondary text-xl active\" href=\"/\" class=\"text-white text-lg\"></a> <a class=\"nav-link hover:text-secondary text-xl \" href=\"/about\" class=\"text-white text-lg\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></div><div id=\"nav-links\" class=\"flex items-center space-x-10\"><a class=\"nav-link hover:text-custom-accent-light text-xl active\" href=\"/\" class=\"text-white text-lg\"></a> <a class=\"nav-link hover:text-custom-accent-light text-xl \" href=\"/about\" class=\"text-white text-lg\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -238,7 +238,7 @@ func Nav() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a> <a class=\"nav-link hover:text-secondary text-xl \" href=\"/projects\" class=\"text-white text-lg\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a> <a class=\"nav-link hover:text-custom-accent-light text-xl \" href=\"/projects\" class=\"text-white text-lg\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -246,7 +246,7 @@ func Nav() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></div><script>\n        document.addEventListener(\"DOMContentLoaded\", function() {\n                var links = document.querySelectorAll('.nav-link');\n                var currentUrl = window.location.href;\n\n                links.forEach(function(link) {\n                        if (link.href === currentUrl) {\n                        link.classList.add('text-secondary'); // Active link class in Tailwind\n                        link.classList.remove('text-primary');\n                        }\n                        });\n                });\n        </script></div></nav>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></div><script>\n        document.addEventListener(\"DOMContentLoaded\", function() {\n                var links = document.querySelectorAll('.nav-link');\n                var currentUrl = window.location.href;\n\n                links.forEach(function(link) {\n                        if (link.href === currentUrl) {\n                        link.classList.add('text-custom-accent-light'); // Active link class in Tailwind\n                        link.classList.remove('text-primary');\n                        }\n                        });\n                });\n        </script></div></nav>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

@@ -81,7 +81,7 @@ templ twitterComButton() {
         <span class="text-sm text-white absolute rounded-lg p-2 transform translate-y-6" x-show="tooltip">X</span>
     </span>
 }
-//<a class="nav-link hover:text-secondary text-xl " href="/experience"projects class="text-white text-lg">Experience</a>
+//<a class="nav-link hover:text-custom-accent-light text-xl " href="/experience"projects class="text-white text-lg">Experience</a>
 // Lets add github, linkedin, twitter, instagram, to the list of items required to finish navbar
 // these items will sit in the center of hte project
 templ Nav() {
@@ -97,9 +97,9 @@ templ Nav() {
             <a target="_blank" rel="noopener noreferrer" href="https://x.com/ennoaragon" class="text-white text-2xl">@twitterComButton()</a> 
         </div>
         <div id="nav-links" class="flex items-center space-x-10">
-            <a class="nav-link hover:text-secondary text-xl active" href="/" class="text-white text-lg"></a>
-            <a class="nav-link hover:text-secondary text-xl " href="/about" class="text-white text-lg">@aboutButton()</a>
-            <a class="nav-link hover:text-secondary text-xl " href="/projects" class="text-white text-lg">@experienceButton()</a>
+            <a class="nav-link hover:text-custom-accent-light text-xl active" href="/" class="text-white text-lg"></a>
+            <a class="nav-link hover:text-custom-accent-light text-xl " href="/about" class="text-white text-lg">@aboutButton()</a>
+            <a class="nav-link hover:text-custom-accent-light text-xl " href="/projects" class="text-white text-lg">@experienceButton()</a>
         </div>
         <script>
         document.addEventListener("DOMContentLoaded", function() {
@@ -108,7 +108,7 @@ templ Nav() {
 
                 links.forEach(function(link) {
                         if (link.href === currentUrl) {
-                        link.classList.add('text-secondary'); // Active link class in Tailwind
+                        link.classList.add('text-custom-accent-light'); // Active link class in Tailwind
                         link.classList.remove('text-primary');
                         }
                         });
