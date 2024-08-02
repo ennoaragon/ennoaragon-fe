@@ -1221,6 +1221,11 @@ select {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-custom-accent-light {
+  --tw-text-opacity: 1;
+  color: rgb(20 156 227 / var(--tw-text-opacity));
+}
+
 .text-custom-gray {
   --tw-text-opacity: 1;
   color: rgb(199 197 197 / var(--tw-text-opacity));
@@ -1239,11 +1244,6 @@ select {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-custom-accent-light {
-  --tw-text-opacity: 1;
-  color: rgb(20 156 227 / var(--tw-text-opacity));
 }
 
 .outline {

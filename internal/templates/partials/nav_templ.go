@@ -238,7 +238,7 @@ func Nav() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a> <a class=\"nav-link hover:text-custom-accent-light text-xl \" href=\"/projects\" class=\"text-white text-lg\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("About</a> <a class=\"nav-link hover:text-custom-accent-light text-xl \" href=\"/projects\" class=\"text-white text-lg\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -246,7 +246,7 @@ func Nav() templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</a></div><script>\n        document.addEventListener(\"DOMContentLoaded\", function() {\n                var links = document.querySelectorAll('.nav-link');\n                var currentUrl = window.location.href;\n\n                links.forEach(function(link) {\n                        if (link.href === currentUrl) {\n                        link.classList.add('text-custom-accent-light'); // Active link class in Tailwind\n                        link.classList.remove('text-primary');\n                        }\n                        });\n                });\n        </script></div></nav>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("Experience</a></div><script>\n        document.addEventListener(\"DOMContentLoaded\", function() {\n                var links = document.querySelectorAll('.nav-link');\n                var currentUrl = window.location.href;\n\n                links.forEach(function(link) {\n                        if (link.href === currentUrl) {\n                        link.classList.add('text-custom-accent-light'); // Active link class in Tailwind\n                        link.classList.remove('text-primary');\n                        }\n                        });\n                });\n        </script></div></nav>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
