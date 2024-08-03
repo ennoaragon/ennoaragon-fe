@@ -16,6 +16,7 @@ type Project struct{
     Title string `json:"title"`
     Date string `json:"created_at"`
     Description string `json:"description"` 
+    Tasks []string `json:"tasks"`
     ImageUrl string `json:"image_url"`
     TechChips []string `json:"tech_chips"`
     ExtUrl templ.SafeURL `json:"external_url"`
@@ -40,3 +41,5 @@ func init() {
         log.Fatal(err) 
     }
 }
+
+// create functions to get projects and expereince from json file online

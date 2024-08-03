@@ -1,44 +1,33 @@
 [
     {
         "id": 1,
-        "title": "Joy Tap",
-        "description": "A simple app that helps you keep track of your mood and emotions.",
-        "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
-        "tech_chips": ["React Native", "Firebase", "Redux"],
-        "created_at": "2021-09-01",
-        "external_url": ""
+        "title": "Full Stack Engineer",
+        "description": "Led the design and development of multiple critical systems, including an Asset Store and monetization system for user-generated content, an alerting system with detailed logging integrated with Elastic Search and Slack, and an Admin portal for internal support tools. Designed and implemented scalable APIs and improved the user experience for over 1,000,000 users across desktop and mobile.",
+        "tasks": [
+            "Led the design and development of the Asset Store and monetization system, enabling user-generated content (UGC) sales through our client; using React, Redux, Node.js, Elastic Search, and AWS.",
+            "Designed and implemented an alerting system with detailed logging by integrating Elastic Search with a Slack bot, improving system metrics and accessibility.",
+            "Developed the Admin portal for internal tools for the support team to assist customers with various subscription plans, account locks, and feature overrides on the client application.",
+            "Designed and implemented scalable APIs using NestJS, MySQL, and AWS, supporting over 1,000,000 users and enabling account creation with multiple subscription plan types for various features across desktop and mobile devices. Enhanced user experience by developing the front end with React, Redux, MailChimp, and AWS lambda.",
+            "Implemented Continuous Integration and Development pipelines, managed pull requests, conducted code reviews, and performed unit testing."
+        ],
+        "image_url": "",
+        "tech_chips": ["React", "Redux", "Node.js", "TypeScript", "Elastic Search", "MySQL", "NestJS","AWS", "Material-UI"],
+        "created_at": "June 2021 - May 2024",
+        "external_url": "https://signup.buildbox.com/"
     }, 
     {
         "id": 2,
-        "title": "Joy Tap",
-        "description": "A simple app that helps you keep track of your mood and emotions.",
-        "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
-        "tech_chips": ["React Native", "Firebase", "Redux"],
-        "created_at": "2021-09-01"
-    },
-    {
-        "id": 3,
-        "title": "Joy Tap",
-        "description": "A simple app that helps you keep track of your mood and emotions.",
-        "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
-        "tech_chips": ["React Native", "Firebase", "Redux"],
-        "created_at": "2021-09-01"
-    },
-    {
-        "id": 4,
-        "title": "Joy Tap",
-        "description": "A simple app that helps you keep track of your mood and emotions.",
-        "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
-        "tech_chips": ["React Native", "Firebase", "Redux"],
-        "created_at": "2021-09-01"
-    },
-    {
-        "id": 5,
-        "title": "Joy Tap",
-        "description": "A simple app that helps you keep track of your mood and emotions.",
-        "image_url": "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
-        "tech_chips": ["React Native", "Firebase", "Redux"],
-        "created_at": "2021-09-01"
+        "title": "Teacher's Assistance",
+        "description":  "Graded student work for all levels of C++ courses, including advanced and Object Oriented Programming (OOP). I developed and evaluated assignments for the SQL and NoSql database course. Assess, assist, and encourage best coding practices.",
+        "tasks": [
+            "Graded student work for all levels of C++ courses, including advanced and Object Oriented Programming (OOP)",
+            "Developed and evaluated assignments for the SQL and NoSql database course.",
+            "Assess, assist, and encourage best coding practices."
+        ],
+        "image_url": "",
+        "tech_chips": ["c++", "MySQL", "MongoDB"],
+        "created_at": "September 2019 - June 2021",
+        "external_url": ""
     }
 ]
 

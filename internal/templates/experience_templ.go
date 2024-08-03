@@ -26,7 +26,7 @@ func Experience() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex flex-col items-center h-fit\"><h1>My Experience</h1><p>Here are some of the things I've done in the past.</p><ul><li>Software Engineer at Google</li><li>Software Engineer at Facebook</li><li>Software Engineer at Microsoft</li></ul></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex flex-col items-center h-fit\"><p class=\"text-6xl\">Experience</p><p>Here are some of the things I've done in the past.</p><ul><li>Software Engineer at Google</li><li>Software Engineer at Facebook</li><li>Software Engineer at Microsoft</li></ul></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

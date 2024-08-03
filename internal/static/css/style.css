@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.6 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.7 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -845,8 +845,16 @@ select {
   margin-top: 2.5rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .box-border {
@@ -871,6 +879,10 @@ select {
 
 .contents {
   display: contents;
+}
+
+.hidden {
+  display: none;
 }
 
 .size-6 {
@@ -944,12 +956,20 @@ select {
   width: 100%;
 }
 
+.w-text-mobile-width-max {
+  width: 375px;
+}
+
 .w-text-width-max {
   width: 600px;
 }
 
 .min-w-full {
   min-width: 100%;
+}
+
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-1 {
@@ -1010,16 +1030,16 @@ select {
   gap: 0.5rem;
 }
 
-.space-x-10 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .space-x-3 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .overflow-auto {
@@ -1148,6 +1168,11 @@ select {
   padding-right: 2rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .pr-4 {
   padding-right: 1rem;
 }
@@ -1178,6 +1203,14 @@ select {
 
 .text-3xl {
   font-size: 1.875rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
 }
 
 .text-7xl {
@@ -1347,9 +1380,61 @@ select {
   --tw-ring-color: rgb(31 41 55 / 0.7);
 }
 
+@media (min-width: 640px) {
+  .sm\:h-full {
+    height: 100%;
+  }
+
+  .sm\:items-center {
+    align-items: center;
+  }
+}
+
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:h-\[30vh\] {
     height: 30vh;
+  }
+
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:w-text-width-max {
+    width: 600px;
+  }
+
+  .md\:space-x-10 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+    margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
+
+  .md\:text-7xl {
+    font-size: 4.5rem;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
   }
 }
 
@@ -1357,11 +1442,19 @@ select {
   .lg\:h-\[40vh\] {
     height: 40vh;
   }
+
+  .lg\:w-text-width-max {
+    width: 600px;
+  }
 }
 
 @media (min-width: 1280px) {
   .xl\:h-\[50vh\] {
     height: 50vh;
+  }
+
+  .xl\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

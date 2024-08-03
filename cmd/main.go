@@ -38,7 +38,7 @@ func main() {
     mux.HandleFunc("/", handler.NewHomeHandler().ServeHTTP)
     mux.HandleFunc("/about", handler.NewAbouthandler().ServeHTTP)
     mux.HandleFunc("/projects", handler.NewProjectsHandler().ServeHTTP)
-    mux.HandleFunc("/experience", handler.NewExperienceHandler().ServeHTTP)
+    //mux.HandleFunc("/experience", handler.NewExperienceHandler().ServeHTTP)
     //mux.NotFoundHandler = http.HandlerFunc(handler.NotFound404)
     
     log.Println("Starting server on :8080")
