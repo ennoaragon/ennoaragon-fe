@@ -54,6 +54,16 @@ templ jobData( job *data.Project) {
                 }
             </div>
             <p class="my-2">{job.Description}</p>
+            <div class="flex w-full flex-wrap" >
+                for i, link := range job.MoreLinks {
+                   <a target="_blank" rel="noopener noreferrer" href={link} class="text-white my-2">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                       <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                       </svg>
+                       <span>{job.Links[i]}</span>
+                    </a>
+                }
+            </div>
             <div class="flex w-full flex-wrap mt-4" >
                 for _, techChip := range job.TechChips {
                     <div class="flex flex-wrap bg-tertiary bg-opacity-40 max-w-full text-black rounded-md mr-2 p-1">

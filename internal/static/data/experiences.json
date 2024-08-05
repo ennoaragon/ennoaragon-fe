@@ -13,7 +13,8 @@
         "image_url": "",
         "tech_chips": ["React", "Redux", "Node.js", "TypeScript", "Elastic Search", "MySQL", "NestJS","AWS", "Material-UI"],
         "created_at": "June 2021 - May 2024",
-        "external_url": "https://signup.buildbox.com/"
+        "external_url": "https://signup.buildbox.com/",
+        "more_links": ["https://buildbox.com/blog", "https://buildboxworld.com/", "http://shop.buildbox.com"]
     }, 
     {
         "id": 2,

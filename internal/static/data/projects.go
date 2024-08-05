@@ -20,6 +20,8 @@ type Project struct{
     ImageUrl string `json:"image_url"`
     TechChips []string `json:"tech_chips"`
     ExtUrl templ.SafeURL `json:"external_url"`
+    MoreLinks []templ.SafeURL `json:"more_links"`
+    Links [] string `json:"more_links"`
  }
 
 var Projects [] *Project
