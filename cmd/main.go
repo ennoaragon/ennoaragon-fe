@@ -36,14 +36,17 @@ func main() {
     mux.Handle("/assets/", http.StripPrefix("/assets/", imageFiles))
     //routes
     mux.HandleFunc("/", handler.NewHomeHandler().ServeHTTP)
-    mux.HandleFunc("/about", handler.NewAbouthandler().ServeHTTP)
-    mux.HandleFunc("/projects", handler.NewProjectsHandler().ServeHTTP)
-    mux.HandleFunc("/experience", handler.NewExperienceHandler().ServeHTTP)
-    //mux.NotFoundHandler = http.HandlerFunc(handler.NotFound404)
-    
+    mux.HandleFunc("GET /about", handler.NewAbouthandler().ServeHTTP)
+    mux.HandleFunc("GET /projects", handler.NewProjectsHandler().ServeHTTP)
+    //mux.HandleFunc("/experience", handler.NewExperienceHandler().ServeHTTP)
+    //mux.NotFoundHandler = http.HandlerFunc(handler.NewNotFound404Handler().ServeHTTP)
+    mux.HandleFunc("GET /gallery", handler.NewGalleryhandler().ServeHTTP)
+
     log.Println("Starting server on :8080")
     err := http.ListenAndServe(":8080", mux)
-    log.Fatal(err)
+    if err != nil {
+        log.Fatal(err)
+    }
 }
 
 //func init() {

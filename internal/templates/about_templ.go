@@ -10,7 +10,6 @@ import templruntime "github.com/a-h/templ/runtime"
 
 import (
 	"ennoaragon/internal/static/data"
-	"ennoaragon/internal/templates/partials"
 )
 
 // <img src="/assets/Team_victory.webp" class="w-full h-[40vh] object-cover rounded-lg" alt="Team victory">
@@ -33,28 +32,20 @@ func About(videoUrl string, carousel []*data.ImageData, production bool) templ.C
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-2 gap-2\"><div class=\"flex flex-col items-center w-full\"><div class=\"px-8 mb-8\"><video class=\"object-cover rounded-lg\" alt=\"Team victory\" controls autoplay muted loop><source src=\"")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-1 xl:grid-cols-1 gap-2 px-10 md:p-2 min-w-full w-full\"><div class=\"flex flex-col items-center w-full max-w-text-mobile-width-max md:w-text-width-max md:max-w-text-width-max text-wrap mx-auto \"><div class=\"px-8 mb-8\"><video class=\"object-cover rounded-lg min-w-[300px] lg:max-w-[700px]\" alt=\"Team victory\" controls autoplay muted loop><source src=\"")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
 		var templ_7745c5c3_Var2 string
 		templ_7745c5c3_Var2, templ_7745c5c3_Err = templ.JoinStringErrs(videoUrl)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/about.templ`, Line: 15, Col: 37}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `internal/templates/about.templ`, Line: 14, Col: 37}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var2))
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" type=\"video/mp4\" ng-if=\"option==&#39;video&#39;\"></video></div><div class=\"text-left max-w-text-width-max w-text-width-max\"><p class=\"text-xl\">I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p><p class=\"text-xl\">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p></div><div class=\"text-left max-w-text-width-max w-text-width-max my-4\"><p class=\"text-xl mb-4\">🎮Paladins Premier Player Accomplishments</p><ul class=\"text-base\"><li class=\"text-base\">🏆1st Paladins Summer Premier 2017  World Champion</li><li>🏆1st 2018 PPL Summer Finals</li><li>🥈2nd 2018 PPL Spring Finals</li><li>🥈2nd 2017 PPL Fall Finals</li><li>🥇1st 5x Champion Regional PPL split 2017-2018</li><li class=\"text-base\">🥉3rd Esports Superstars: Paladins 2018</li></ul></div><div class=\"text-left max-w-text-width-max w-text-width-max\"><p class=\"text-xl\">I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p><p class=\"text-xl\">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p></div><div class=\"text-left max-w-text-width-max w-text-width-max\"><p class=\"text-xl\">I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p><p class=\"text-xl\">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p></div><div class=\"text-left max-w-text-width-max w-text-width-max\"><p class=\"text-xl\">I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p><p class=\"text-xl\">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p></div></div><div class=\"w-full \">")
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		templ_7745c5c3_Err = partials.PhotographyGrid(carousel, production).Render(ctx, templ_7745c5c3_Buffer)
-		if templ_7745c5c3_Err != nil {
-			return templ_7745c5c3_Err
-		}
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("</div></div>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("\" type=\"video/mp4\" ng-if=\"option==&#39;video&#39;\"></video></div><div class=\"text-left text-base\"><p>Former professional eSports player turned Full Stack Developer, I have successfully transitioned my passion for gaming into a thriving career in tech. During my gaming years, I honed vital skills in teamwork and dedication, contributing to significant wins for North America in a field dominated by Europe.</p></div><div class=\"text-left my-4\"><p class=\"text-xl mb-4\">🎮Paladins Premier Player Accomplishments</p><ul class=\"text-base\"><li class=\"text-base\">🏆1st Paladins Summer Premier 2017 </li><li>🏆1st 2018 PPL Summer Finals</li><li>🥈2nd 2018 PPL Spring Finals</li><li>🥈2nd 2017 PPL Fall Finals</li><li>🥇1st 5x Champion Regional PPL split 2017-2018</li><li class=\"text-base\">🥉3rd Esports Superstars: Paladins 2018</li></ul></div><div class=\"text-left my-4\"><p>Now as Full Stack Developer, I bring passion and teamwork from the gaming world to create exceptional user experiences. I'm currently deepening my expertise in Go, while confidently employing HTML, CSS, and frameworks like Next.js, React.js, and Svelte. My technical journey extends from building intuitive SaaS and e-commerce solutions to developing tools for DnD campaigns. Continuously enhancing my skills, I am committed to using cutting-edge technologies to deliver innovative solutions and eagerly look forward to completing several game projects soon.</p></div><div><p class=\"text-base mt-6\">When I'm not working on a project, you'll  find me outdoors hiking, capturing landscapes through  photography, staying active, or ticking off destinations from  my travel bucket list. Check out some of my favorite shots <a class=\"text-secondary\" href=\"/gallery\">here</a>.</p></div></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

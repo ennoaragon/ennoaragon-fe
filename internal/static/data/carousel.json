@@ -85,9 +85,9 @@
   },
   {
     "Id": 14,
-    "Title": "Team victory",
-    "LocalSrc": "assets/Team_victory.webp",
-    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/Team_victory.webp"
+    "Title": "First Surf",
+    "LocalSrc": "assets/first_surf.webp",
+    "RemoteSrc": "https://storage.googleapis.com/ea-frontend-assets/first_surf.webp"
   },
   {
     "Id": 15,

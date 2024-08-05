@@ -1,0 +1,14 @@
+package templates
+
+import (
+    "ennoaragon/internal/templates/partials"
+    "ennoaragon/internal/static/data"
+)
+
+templ Gallery(carousel []*data.ImageData, production bool) { 
+    <div class="grid grid-cols-1 xl:grid-cols-1 gap-3 px-10 md:p-2 min-w-full w-full">
+        <div class="w-full ">
+            @partials.PhotographyGrid(carousel, production)
+        </div>
+    </div>
+}

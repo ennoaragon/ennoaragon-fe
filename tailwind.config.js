@@ -39,6 +39,7 @@ module.exports = {
     },
     width: {
       'text-width-max': '600px', // Now you can use class="w-custom"
+      'text-mobile-width-max': '375px',
     },
     backgroundImage: {
         'gradient-45': 'linear-gradient(60deg, var(--tw-gradient-stops))',

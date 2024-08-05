@@ -5,50 +5,89 @@ import (
 )
 
 templ project (project *data.Project) {
-    <div class="rounded my-4 w-text-width-max border-transparent box-border border-2 
+    <div class="rounded my-4 border-transparent box-border border-2 
         hover:border-tertiary hover:box-border hover:border-2 hover:bg-custom-background-lighter
-        hover:bg-opacity-30 max-w-text-width-max">
+        hover:bg-opacity-30 max-w-text-mobile-width-max md:w-text-width-max md:max-w-text-width-max text-wrap ">
         @projectData(project)
     </div>
 }
 
 templ projectData( project *data.Project) {
-
-        <div class="p-2">
-            <div class="flex flex-1 justify-between w-full ">
-            <p class="text-3xl my-2">{project.Title}</p>
-            if project.ExtUrl != "" {
-                <a target="_blank" rel="noopener noreferrer" href={project.ExtUrl} class="text-white my-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                    </svg>
-                    </a>
-            }
+    <div class="p-2">
+        <div class="flex flex-1 justify-between w-full ">
+        <p class="text-xl md:text-3xl my-2">{project.Title}</p>
+        if project.ExtUrl != "" {
+            <a target="_blank" rel="noopener noreferrer" href={project.ExtUrl} class="text-white my-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                </svg>
+                </a>
+        }
         </div>
-            <p class="my-2">{project.Description}</p>
-            <p class="my-2">{project.Date}</p>
+        <p class="my-2">{project.Description}</p>
+        <div class="flex w-full flex-wrap" >
+        for _, techChip := range project.TechChips {
+            <div class="bg-tertiary bg-opacity-40 text-black rounded-md mt-4 mr-2 p-1">
+                <p class="text-white">{techChip}</p>
+                </div>
+        }
+        </div>
+    </div>
+}
+
+templ jobData( job *data.Project) {
+    <div class="rounded my-4 border-transparent box-border border-2 
+        hover:border-tertiary hover:box-border hover:border-2 hover:bg-custom-background-lighter
+        hover:bg-opacity-30 max-w-text-mobile-width-max md:w-text-width-max md:max-w-text-width-max text-wrap ">
+        <div class="p-2">
+            <div class="flex flex-1 justify-between w-full items-center">
+                <div class="my-2">
+                    <p class="text-xl md:text-3xl">{job.Title}</p>
+                    <p class="text-base md:text-lg ">{job.Date}</p>
+                </div>
+                if job.ExtUrl != "" {
+                    <a target="_blank" rel="noopener noreferrer" href={job.ExtUrl} class="text-white my-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>
+                        </a>
+                }
+            </div>
+            <p class="my-2">{job.Description}</p>
             <div class="flex w-full flex-wrap" >
-            for _, techChip := range project.TechChips {
-                <div class="bg-tertiary bg-opacity-40 text-black rounded-md mr-2 p-1">
-                    <p class="text-white">{techChip}</p>
+                for i, link := range job.MoreLinks {
+                   <a target="_blank" rel="noopener noreferrer" href={link} class="text-white my-2">
+                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                       <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                       </svg>
+                       <span>{job.Links[i]}</span>
+                    </a>
+                }
+            </div>
+            <div class="flex w-full flex-wrap mt-4" >
+                for _, techChip := range job.TechChips {
+                    <div class="flex flex-wrap bg-tertiary bg-opacity-40 max-w-full text-black rounded-md mr-2 p-1">
+                        <p class="text-white">{techChip}</p>
                     </div>
-            }
+                }
             </div>
         </div>
+    </div>
 }
-//<div class="flex flex-col w-full">
-//<p class="text-8xl text-center">Experiences</p>
-//<div class="flex flex-col text-white justify-center items-center">   
-//for _, p := range experinces {
-//    @project(p)
-//}
-//
-//</div>
-//</div>
+
 // we will need to cylce through range of itmes that we can parse later
-templ Projects(projects [] *data.Project, experinces [] *data.Project) {
-    <div class="grid grid-cols-1 gap-2 p-2 min-w-full w-full">
-        <div class="flex flex-col w-full">
+templ Projects(projects [] *data.Project, experience [] *data.Project) {
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-2 px-10 md:p-2 min-w-full w-full">
+        <div class="flex flex-col w-full mt-10">
+            <p class="text-4xl md:text-7xl md:text-center text-white">Experience</p>
+            <div class="flex flex-col text-white justify-center items-center">   
+                for _, j := range experience {
+                    @jobData(j)
+                }
+            </div>
+        </div>
+        <div class="flex flex-col w-full mt-10">
+            <p class="text-4xl md:text-7xl md:text-center text-white">Projects</p>
             <div class="flex flex-col text-white justify-center items-center">   
                 for _, p := range projects {
                     @project(p)

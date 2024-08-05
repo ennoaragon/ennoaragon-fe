@@ -30,7 +30,7 @@ func photo(image *data.ImageData, production bool) templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"relative w-full h-full p-2 rounded\"><div class=\"absolute w-full h-full font-bold\n        text-base drop-shadow-lg\"><div class=\"relative flex justify-between p-2\"><div><p>")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"relative w-full h-full p-2 rounded\"><div class=\"absolute w-full h-full font-bold\n        text-base drop-shadow-lg\"><div class=\"relative hidden md:flex md:text-base justify-between p-2\"><div><p>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -137,7 +137,7 @@ func PhotographyGrid(images []*data.ImageData, production bool) templ.Component 
 			templ_7745c5c3_Var7 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-2 bg-black bg-opacity-30 rounded\">")
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"grid grid-cols-2 xl:grid-cols-3 bg-black bg-opacity-30 rounded\">")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
