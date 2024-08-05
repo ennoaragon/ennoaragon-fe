@@ -9,7 +9,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 # Take in just the go files for the docker file
-COPY . /app 
+COPY . . 
 
 RUN go build -o main ./cmd/main.go
 
