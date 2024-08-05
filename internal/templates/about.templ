@@ -8,18 +8,18 @@ import (
 //<img src="/assets/Team_victory.webp" class="w-full h-[40vh] object-cover rounded-lg" alt="Team victory">
 //<div class="relative flex flex-col items-center">
 templ About(videoUrl string, carousel []*data.ImageData, production bool) {
-    <div class="grid grid-cols-2 gap-2">
-        <div class="flex flex-col items-center w-full">
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-2 px-10 md:p-2 min-w-full w-full">
+        <div class="flex flex-col items-center w-full max-w-text-mobile-width-max md:w-text-width-max md:max-w-text-width-max text-wrap mx-auto ">
             <div class="px-8 mb-8">
-                <video class="object-cover rounded-lg" alt="Team victory" controls autoplay muted loop>
+                <video class="object-cover rounded-lg min-w-[300px] lg:max-w-[700px]" alt="Team victory" controls autoplay muted loop>
                 <source src={videoUrl } type="video/mp4" ng-if="option=='video'">
                 </video>
             </div>
-            <div class="text-left max-w-text-width-max w-text-width-max">
+            <div class="text-left ">
                 <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
                 <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
             </div>
-            <div class="text-left max-w-text-width-max w-text-width-max my-4">
+            <div class="text-left my-4">
                 <p class="text-xl mb-4">🎮Paladins Premier Player Accomplishments</p>
                 <ul class="text-base">
                     <li class="text-base">🏆1st Paladins Summer Premier 2017 
@@ -31,15 +31,15 @@ templ About(videoUrl string, carousel []*data.ImageData, production bool) {
                     <li class="text-base">🥉3rd Esports Superstars: Paladins 2018</li>
                 </ul>
             </div>
-            <div class="text-left max-w-text-width-max w-text-width-max">
+            <div class="text-left ">
                 <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
                 <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
             </div>
-            <div class="text-left max-w-text-width-max w-text-width-max">
+            <div class="text-left ">
                 <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
                 <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
             </div>
-            <div class="text-left max-w-text-width-max w-text-width-max">
+            <div class="text-left ">
                 <p class="text-xl" >I was an professional eSports player and turned my hobby of coding into my career. I enjoy full stack development and have passion for creating a great UX experience for users. I am a quick learner and always looking to improve my skills.</p>
                 <p class="text-xl">I look foward to working on cutting edge projects, emphasis of bringing useful and innovative solutions users.</p>
             </div>
