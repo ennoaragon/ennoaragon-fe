@@ -4,6 +4,7 @@
 * Tailwind - CSS
 * Templ - Templating
 * HTMX - Interactivity
+* apline js
 
 ## Development 
 ```make dev```
