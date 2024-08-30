@@ -10,9 +10,7 @@
 ```make dev```
 
 ## Production
-* TODO: Dockerfile is provided for containerization
-* TODO: create a CI/CD pipeline and ENV vars
-
+Work in progress
 ## Technologies
 
 ### Air
