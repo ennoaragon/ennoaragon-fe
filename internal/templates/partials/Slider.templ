@@ -5,17 +5,17 @@ import (
 )
 
 templ slide() {
-    <div class="hiddeduration-700 ease-in-out" 
+    <div class="hiddeduration-700 ease-in-out"
         x-show="activeSlide === slide.Id">
         <img :src="slide.LocalSrc" class=" block w-full" :alt="slide.Title">
     </div>
 }
 
 templ sliderButtons(){
-        <button type="button" class="w-3 h-3 outline outline-2 rounded-full":class="{ 
+        <button type="button" class="w-3 h-3 outline outline-2 rounded-full":class="{
               'bg-secondary': activeSlide === slide.Id,
-              'bg-custom-gradiant': activeSlide !== slide.Id 
-          }" 
+              'bg-custom-gradiant': activeSlide !== slide.Id
+          }"
           x-on:click="activeSlide = slide.Id" ></button>
 }
 
@@ -86,14 +86,14 @@ templ Slider(images []data.ImageData) {
     </script>
     <div id="default-carousel" class="relative w-full" >
         <!-- Carousel wrapper -->
-        <div class="relative h-[50vh] overflow-hidden rounded-lg md:h-[30vh] lg:h-[40vh] xl:h-[50vh] 2xl:h-[50vh]" 
+        <div class="relative h-[50vh] overflow-hidden rounded-lg md:h-[30vh] lg:h-[40vh] xl:h-[50vh] 2xl:h-[50vh]"
             x-data="slider"
-            >       
+            >
             <template x-for="slide in slides" :key="slide.Id">
                 @slide()
             </template>
 
-            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" 
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                 @click="prevSlide">
                 <!-- Slider controls -->
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -103,7 +103,7 @@ templ Slider(images []data.ImageData) {
                     <span class="sr-only">Previous</span>
                 </span>
             </button>
-            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" 
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                 @click="nextSlide">
                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                     <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
