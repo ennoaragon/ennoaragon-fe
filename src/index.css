@@ -1,68 +1,117 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@custom-variant dark (&:where(.dark, .dark *));
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+    --gradient-double45: linear-gradient(150deg, var(--tw-gradient-stops)), linear-gradient(240deg, var(--tw-gradient-stops));
+    --gradient-fancy: linear-gradient(217deg, #1c282e,#181818 30.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+
+    --color-primary: white;
+    --color-secondary: #FF7F50;
+    --color-tertiary: #126794;
+    --custom-gray: #c7c5c5;
+    --active-link: #F0F0F0;
+    --custom-accent: #1c282e;
+    --custom-accent-light: #149ce3;
+    --custom-background: #1b1b1b;
+    --custom-background-lighter: #363636;
+    --custom-gradiant: #1c282e;
+    --custom-purple: #6A0DAD;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+.background-gradient {
+    background: linear-gradient(
+    60deg,
+    var(--custom-background) 60%,
+    var(--custom-gradiant) 70%,
+    var(--custom-background) 80%
+  );
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    overflow-y:hidden;
+    margin-right:0;
+    padding-right:0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+:root {
+  --bg-color: #f9fafb; /* Light mode background */
+  --text-color: black; /* Light mode text color */
+  --body-bg-light: #f9fafb;
+  --body-text-light: #111827;
+  --button-bg: #323B3F;
+  --button-text: white;
+  --button-hover: #374151;
+  --body-bg-dark: #323B3F;
+  --body-text-dark: #f9fafb;
+
+  --text-light: white;
+  --text-dark: #323B3F;
+
+@variant dark {
+    /*--bg-color: #01101f;*/
+    --bg-color: #323B3F;
+    --t-color: white;
+    --button-bg: #374151;
+    --button-text: #f9fafb;
+    --button-hover: #374151;
+  }
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.dark-mode {
+    background-color: var(--body-bg-dark);
+    color: var(--body-text-dark);
 }
+
+.btn {
+    cursor: pointer;
+    width: 75px;
+    height: 30px;
+    border: 2px solid var(--button-bg-dark);
+    background-color: var(--button-bg);
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: var(--button-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        background-color: var(--button-hover);
+    }
+}
+
+.light-btn {
+    cursor: pointer;
+    width: 75px;
+    height: 30px;
+    border: 2px solid var(--button-bg-dark);
+    background-color: var(--body-bg-light);
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: var(--button-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        background-color: var(--button-hover);
+        color: white;
+    }
+}
+.app-content {
+    height: calc(100%-50px);
+    width: 100%;
+}
+
