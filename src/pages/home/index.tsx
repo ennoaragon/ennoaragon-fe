@@ -3,7 +3,7 @@ function Home() {
 
     return (
      <div className="flex flex-col sm:items-center justify-center w-full h-fit sm:h-full px-10">
-        <div className="text-left max-w-text-mobile-width-max md:w-text-width-max md:max-w-text-width-max text-wrap mx-auto ">
+        <div className="text-left max-w-(--text-mobile-width-max) md:w-(--text-width-max) md:max-w-(--text-width-max) text-wrap mx-auto ">
             <p className="text-4xl md:text-7xl text-wrap">Enno Aragon</p>
             <p className="text-base mt-6">Hey, I’m Enno Aragon an ex pro-gamer turned programmer.</p>
             <p className="text-base mt-6">My journey began in 2016 when I embarked
