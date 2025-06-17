@@ -1,40 +1,37 @@
+import Expereince from "./experience"
+import Projects from "./projects"
 
 function Home() {
-
     return (
-     <div className="flex flex-col sm:items-center justify-center w-full h-fit sm:h-full px-10">
-        <div className="text-left max-w-(--text-mobile-width-max) md:w-(--text-width-max) md:max-w-(--text-width-max) text-wrap mx-auto ">
-            <p className="text-4xl md:text-7xl text-wrap">Enno Aragon</p>
-            <p className="text-base mt-6">Hey, I’m Enno Aragon an ex pro-gamer turned programmer.</p>
-            <p className="text-base mt-6">My journey began in 2016 when I embarked
-            on building a website for my father’s business, finding the
-            complexities of backend and frontend development both challenging
-            and captivating. Shortly after, my eSports career took off, you can
-            read more about it <a className="text-secondary" href="/about">here </a>.
-            Over the years, I've developed software during my content creation
-            and <a target="_blank" rel="noopener noreferrer" href="https://www.twitch.tv/idropbodies_tv" className="text-secondary">gaming days</a>, worked at a
-            <a className="text-secondary" href="https://signup.buildbox.com/">startup</a>,
-            and tackled ambitious projects at
-                <a target="_blank" rel="noopener noreferrer" href="https://idropstudios.com"
-                    className="text-secondary">
-                    iDropStudios
-                </a>.
-            </p>
-            <p className="text-base mt-6">I'm focused on honing my engineering
-                skills by developing desktop and web applications that enhance
-                UX, including CLI tools, and Discord bots for D&D for friends.
-                I'm also exploring video game development. Each project refines
-                my skills and broadens my perspective. Learn more about my work
-                <a className="text-secondary" href="/projects">here</a>.
-            </p>
-            <p className="text-base mt-6">When I'm not working on a project, you'll
-                find me outdoors hiking, capturing landscapes through
-                photography, staying active, or ticking off destinations from
-                my travel bucket list. Check out some of my favorite shots
-                <a className="text-secondary" href="/gallery">here</a>.
-            </p>
-        </div>
-    </div>
+        <>
+            <section className="content flex flex-col justify-center items-center min-h-screen text-left h-screen w-full">
+                <div className="max-w-(--text-mobile-width-max) md:w-(--text-width-max) md:max-w-(--text-width-max) ">
+                    <div className="text-left">
+                        <p className="text-left text-4xl md:text-7xl">Enno Aragon</p>
+                    </div>
+                    <p className="text-base mt-6">Hey, I’m Enno Aragon an ex pro-gamer turned programmer.</p>
+                    <p className="text-base mt-6">I'm focused on honing my engineering
+                        skills by developing desktop and web applications that enhance
+                        UX, including CLI tools, and Discord bots for D&D for friends.
+                        I'm also exploring video game development. Each project refines
+                        my skills and broadens my perspective. Learn more about my work
+                        <a href="/projects">here</a>.
+                    </p>
+                    <p className="text-base mt-6">When I'm not working on a project, you'll
+                        find me outdoors hiking, capturing landscapes through
+                        photography, staying active, or ticking off destinations from
+                        my travel bucket list. Check out some of my favorite shots
+                        <a href="/gallery">here</a>.
+                    </p>
+                </div>
+            </section>
+            <section id="experience" className="content flex flex-col justify-center items-center min-h-screen text-left h-screen w-full">
+                <Expereince />
+            </section>
+            <section id="projects" className="content flex flex-col justify-center items-center min-h-screen text-left h-screen w-full">
+                <Projects />
+            </section>
+        </>
     )
 }
 

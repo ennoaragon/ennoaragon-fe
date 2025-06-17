@@ -4,12 +4,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    --gradient-double45: linear-gradient(150deg, var(--tw-gradient-stops)), linear-gradient(240deg, var(--tw-gradient-stops));
-    --gradient-fancy: linear-gradient(217deg, #1c282e,#181818 30.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
-
-    --color-primary: white;
-    --color-secondary: #FF7F50;
-    --color-tertiary: #126794;
+    --theme-primary: white;
+    --theme-secondary: #FF7F50;
+    --theme-tertiary: #126794;
     --custom-gray: #c7c5c5;
     --active-link: #F0F0F0;
     --custom-accent: #1c282e;
@@ -22,6 +19,43 @@
     --text-mobile-width-max: 375px;
 }
 
+html, body, #root { /* Or whatever your root element is */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  /* overflow-x: hidden; if you want to prevent horizontal scrolling */
+  overflow-x: hidden;
+}
+
+body {
+  /* This is your fixed background for the entire page */
+  /* This will match the 'background-gradient' you had on your App div */
+  background: linear-gradient(
+    45deg,
+    var(--custom-background) 60%,
+    var(--custom-gradiant) 70%,
+    var(--custom-background) 80%
+  );
+  background-attachment: fixed; /* KEEPS THE BACKGROUND FIXED WHILE CONTENT SCROLLS */
+  background-size: cover; /* Optional, adjusts if it's an image */
+  background-position: center; /* Optional */
+
+  /* Set your default text color and font here */
+  color: white; /* Applies text-white globally */
+  font-family: 'Lato', sans-serif; /* Applies font-Lato globally */
+  line-height: normal; /* Applies leading-normal globally */
+  letter-spacing: normal; /* Applies tracking-normal globally */
+}
+
+.content {
+    height: 100%;
+    max-width: 1600px;
+    overflow-y: visible;
+    a {
+        color: var(--theme-secondary);
+    }
+}
+
 .background-gradient {
     background: linear-gradient(
     60deg,
@@ -31,15 +65,6 @@
   );
 }
 
-body {
-    overflow-y:hidden;
-    margin-right:0;
-    padding-right:0;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
 
 :root {
   --bg-color: #f9fafb; /* Light mode background */

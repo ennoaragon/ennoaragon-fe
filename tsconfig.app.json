@@ -30,6 +30,9 @@
             "@store/*": [
                 "src/store/*"
             ],
+            "@static/*": [
+                "src/static/*"
+            ],
             "@styles/*": [
                 "src/styles/*"
             ],
