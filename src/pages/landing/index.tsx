@@ -10,6 +10,9 @@ function Landing() {
             <main className="min-h-screen overflow-y-auto ">
                 <Outlet />
             </main>
+            <footer className="relative flex justify-end text-right w-full pr-4 b-0 mt-10">
+                <p className="text-custom-gray">2025 - Present © EnnoAragon</p>
+            </footer>
         </>
     )
 }

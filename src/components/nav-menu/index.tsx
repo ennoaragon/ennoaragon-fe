@@ -1,4 +1,4 @@
-import { MouseEvent } from "react"
+import { useEffect, useState } from "react"
 import { Link } from "react-router"
 import { useUiStore } from "@store/uiStore"
 import {
@@ -14,6 +14,41 @@ import {
 export default function NavMenu() {
     const darkMode = useUiStore(state => state.darkMode)
     const setdarkMode = useUiStore(state => state.lightSwitch)
+    const [scrolled, setScrolled] = useState<boolean>(false);
+    const [visible, setVisible] = useState<boolean>(true);
+
+    useEffect(() => {
+        console.log("effect");
+        let lastScrollTop = window.scrollY;
+
+        const handleScroll = () => {
+            const currentScroll = window.scrollY;
+            console.log(currentScroll);
+
+            if (currentScroll> 50) {
+                console.log("it scrolled low enough");
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+
+            if(currentScroll > lastScrollTop && currentScroll > 100) {
+                console.log("it scrolled low enough");
+                setVisible(false);
+            } else {
+                console.log("it didn't scroll low enough");
+                setVisible(true);
+            }
+
+            lastScrollTop = currentScroll;
+        };
+        window.addEventListener('scroll', handleScroll);
+
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     function darkModeButton(e: MouseEvent) {
         e.preventDefault()
@@ -34,7 +69,7 @@ export default function NavMenu() {
     };
 
     return (
-        <nav className="w-full h-[50px] flex flex-row fixed bg-transparent">
+        <nav className={`fixed w-full top-0 h-14 flex flex-row transition-transform duration-300 z-50 text-white ${scrolled? 'bg-white' : 'bg-transparent'} ${ visible ? 'translate-y-0': '-translate-y-full'} `}>
             <div className="mx-2 h-full flex flex-row items-center justify-center text-center">
                 <div className="flex items-center">
                     <a target="_blank" rel="noopener noreferrer" href="https://github.com/ennoaragon" className="text-white text-2xl">{githubButton()}</a>
@@ -49,7 +84,7 @@ export default function NavMenu() {
                 </Link>
             </div>
             <div className="flex justify-center items-center space-x-4 md:space-x-10">
-                <button onClick={(e: MouseEvent) => darkModeButton(e)} className="cursor-pointer">
+                <button onClick={(e) => darkModeButton(e)} className="cursor-pointer">
                     {darkMode ?
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="30px" width="30px" className="fill-(--t-color)">
                             <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
@@ -60,7 +95,7 @@ export default function NavMenu() {
                         </svg>
                     }
                 </button>
-                <Link className="nav-link hover:text-custom-accent-light text-lg text-white "
+                <Link className="hover:text-custom-accent-light text-lg text-white "
                     to="/about">
                     <div className="flex justify-center items-center">
                         {aboutButton()}
@@ -69,7 +104,7 @@ export default function NavMenu() {
                         </span>
                     </div>
                 </Link>
-                <button className="nav-link hover:text-custom-accent-light text-white text-lg cursor-pointer" onClick={() => scrollToSection("experience")}>
+                <button className="hover:text-custom-accent-light text-white text-lg cursor-pointer" onClick={() => scrollToSection("experience")}>
                     <div className="flex justify-center items-center">
                         {experienceButton()}
                         <span className="hidden md:block text-sm text-white">
@@ -77,7 +112,7 @@ export default function NavMenu() {
                         </span>
                     </div>
                 </button>
-                <button className="nav-link hover:text-custom-accent-light text-white text-lg cursor-pointer" onClick={() => scrollToSection("projects")}>
+                <button className="hover:text-custom-accent-light text-white text-lg cursor-pointer" onClick={() => scrollToSection("projects")}>
                     <div className="flex justify-center items-center">
                         {projectsButton()}
                         <span className="hidden md:block text-sm text-white">

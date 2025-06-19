@@ -28,7 +28,7 @@ function Home() {
             <section id="experience" className="content flex flex-col justify-center items-center min-h-screen text-left h-screen w-full">
                 <Expereince />
             </section>
-            <section id="projects" className="content flex flex-col justify-center items-center min-h-screen text-left h-screen w-full">
+            <section id="projects" className="content flex flex-col justify-center items-center min-h-fill  text-left h-screen w-full">
                 <Projects />
             </section>
         </>
