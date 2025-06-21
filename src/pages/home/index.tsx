@@ -2,12 +2,14 @@ import Expereince from "./experience"
 import Projects from "./projects"
 
 function Home() {
+
+
     return (
-        <>
+        < >
             <section className="content flex flex-col justify-center items-center min-h-screen text-left h-screen w-full">
                 <div className="max-w-(--text-mobile-width-max) md:w-(--text-width-max) md:max-w-(--text-width-max) ">
                     <div className="text-left">
-                        <p className="text-left text-4xl md:text-7xl">Enno Aragon</p>
+                        <p className="text-4xl md:text-7xl">Enno Aragon</p>
                     </div>
                     <p className="text-base mt-6">Hey, I’m Enno Aragon an ex pro-gamer turned programmer.</p>
                     <p className="text-base mt-6">I'm focused on honing my engineering

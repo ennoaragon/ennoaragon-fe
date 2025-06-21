@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router"
-import { useUiStore } from "@store/uiStore"
 import {
     githubButton,
     linkedInButton,
@@ -10,56 +9,47 @@ import {
     aboutButton,
     projectsButton
 } from "./components/buttons"
+import { useTheme } from "@/components/theme-provider.tsx"
 
-export default function NavMenu() {
-    const darkMode = useUiStore(state => state.darkMode)
-    const setdarkMode = useUiStore(state => state.lightSwitch)
+function NavMenu() {
+
     const [scrolled, setScrolled] = useState<boolean>(false);
     const [visible, setVisible] = useState<boolean>(true);
+    const scrollElement = document.body;
+
+    const { theme, setTheme } = useTheme()
 
     useEffect(() => {
-        console.log("effect");
-        let lastScrollTop = window.scrollY;
+        let lastScrollTop = 0;
 
         const handleScroll = () => {
-            const currentScroll = window.scrollY;
-            console.log(currentScroll);
 
-            if (currentScroll> 50) {
-                console.log("it scrolled low enough");
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
+            const currentScroll = scrollElement.scrollTop || 0; // || window.scrollY;
+            console.log(scrollElement)
 
-            if(currentScroll > lastScrollTop && currentScroll > 100) {
-                console.log("it scrolled low enough");
+            setScrolled(currentScroll > 50);
+
+            if (currentScroll > lastScrollTop && currentScroll > 100) {
                 setVisible(false);
             } else {
-                console.log("it didn't scroll low enough");
-                setVisible(true);
+                setVisible(true)
             }
 
             lastScrollTop = currentScroll;
         };
-        window.addEventListener('scroll', handleScroll);
 
+
+        if (scrollElement) {
+            scrollElement.addEventListener('scroll', handleScroll, { passive: true });
+        }
 
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            if (scrollElement) {
+                scrollElement.removeEventListener('scroll', handleScroll);
+            };
+
         };
     }, []);
-
-    function darkModeButton(e: MouseEvent) {
-        e.preventDefault()
-
-        setdarkMode(!darkMode)
-        if (!darkMode) {
-            localStorage.setItem("theme", "dark")
-        } else {
-            localStorage.setItem("theme", "light")
-        }
-    }
 
     function scrollToSection(id: string) {
         const element = document.getElementById(id);
@@ -69,13 +59,15 @@ export default function NavMenu() {
     };
 
     return (
-        <nav className={`fixed w-full top-0 h-14 flex flex-row transition-transform duration-300 z-50 text-white ${scrolled? 'bg-white' : 'bg-transparent'} ${ visible ? 'translate-y-0': '-translate-y-full'} `}>
+        <nav className={`fixed w-full top-0 left-0 right-0 h-14 flex flex-row transition-transform duration-300 ease-out
+            z-50 ${scrolled ? 'bg-background' : 'bg-transparent'}
+            ${visible ? 'translate-y-0' : '-translate-y-full'} `}>
             <div className="mx-2 h-full flex flex-row items-center justify-center text-center">
                 <div className="flex items-center">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/ennoaragon" className="text-white text-2xl">{githubButton()}</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ennoaragon" className="text-white text-2xl">{linkedInButton()}</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ennoaragon" className="text-white text-2xl">{instaButton()}</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://x.com/ennoaragon" className="text-white text-2xl">{twitterComButton()}</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/ennoaragon" className=" text-2xl">{githubButton()}</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ennoaragon" className=" text-2xl">{linkedInButton()}</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ennoaragon" className=" text-2xl">{instaButton()}</a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://x.com/ennoaragon" className=" text-2xl">{twitterComButton()}</a>
                 </div>
             </div>
             <div className="h-full flex flex-row items-center justify-center text-center min-w-[200px] flex-1">
@@ -84,38 +76,42 @@ export default function NavMenu() {
                 </Link>
             </div>
             <div className="flex justify-center items-center space-x-4 md:space-x-10">
-                <button onClick={(e) => darkModeButton(e)} className="cursor-pointer">
-                    {darkMode ?
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="30px" width="30px" className="fill-(--t-color)">
+                {theme === "dark" ?
+
+                    <button onClick={() => setTheme("light")} className="cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="30px" width="30px" className="fill-(--primary)">
                             <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
                         </svg>
-                        :
+                    </button>
+                    :
+
+                    <button onClick={() => setTheme("dark")} className="cursor-pointer">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="fill-(--button-bg)" height="30px" width="30px">
                             <path fillRule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clipRule="evenodd" />
                         </svg>
-                    }
-                </button>
-                <Link className="hover:text-custom-accent-light text-lg text-white "
+                    </button>
+                }
+                <Link className="hover:text-custom-accent-light text-lg"
                     to="/about">
                     <div className="flex justify-center items-center">
                         {aboutButton()}
-                        <span className="hidden md:block text-sm text-white">
+                        <span className="hidden md:block text-sm ">
                             About
                         </span>
                     </div>
                 </Link>
-                <button className="hover:text-custom-accent-light text-white text-lg cursor-pointer" onClick={() => scrollToSection("experience")}>
+                <button className="hover:text-custom-accent-light  text-lg cursor-pointer" onClick={() => scrollToSection("experience")}>
                     <div className="flex justify-center items-center">
                         {experienceButton()}
-                        <span className="hidden md:block text-sm text-white">
+                        <span className="hidden md:block text-sm ">
                             Experience
                         </span>
                     </div>
                 </button>
-                <button className="hover:text-custom-accent-light text-white text-lg cursor-pointer" onClick={() => scrollToSection("projects")}>
+                <button className="hover:text-custom-accent-light  text-lg cursor-pointer" onClick={() => scrollToSection("projects")}>
                     <div className="flex justify-center items-center">
                         {projectsButton()}
-                        <span className="hidden md:block text-sm text-white">
+                        <span className="hidden md:block text-sm ">
                             Projects
                         </span>
                     </div>
@@ -127,3 +123,4 @@ export default function NavMenu() {
     )
 }
 
+export default NavMenu
