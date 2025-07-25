@@ -2,12 +2,13 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant dark (&:is(.dark *));
 
 
 :root {
     --text-width-max: 600px;
     --text-mobile-width-max: 375px;
-      --text-color: black;
+    --text-color: black;
 
     --theme-text: #f9fafb;
     --theme-primary: black;
@@ -18,11 +19,12 @@
     --custom-accent: #1c282e;
     --custom-accent: #149ce3;
     --custom-background: #f0f0f0;
+    --custom-nav-background: #FF7F50;
     --custom-gradiant: #FF7F50;
     --custom-purple: #6A0DAD;
 
   --radius: 0.625rem;
-  --background: var(--theme-secondary);
+  --background: var(--custom-nav-background);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -75,32 +77,25 @@
     --active-link: #F0F0F0;
     --custom-accent: #1c282e;
     --custom-accent-light: #149ce3;
+
     --custom-background: #1b1b1b;
     --custom-background-lighter: #f0f0f0;
     --custom-gradiant: #1c282e;
     --custom-purple: #6A0DAD;
     --custom-gradiant: #1c282e;
-    --custom-background: #1b1b1b;
+    --custom-nav-background: oklch(0.3456 0.0139 226.4);
+
     --custom-dark-gray: oklch(0.3456 0.0139 226.4);
 
-    --fancy-bg: linear-gradient(
-    45deg,
-    hsl(0 0% 11%) 60%,
-    hsl(200 24% 15%)70%,
-    hsl(0 0% 11%)80%
-        );
 
-    --fancy-bg-test: linear-gradient(to top left,#16222A,#3A6073)
-
-  /*--background: #323B3F; */
-  --background: var(--custom-dark-gray);
+  --background: var(--custom-nav-background);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.269 0 0);
   --popover-foreground: oklch(0.985 0 0);
   --primary: var(--theme-primary);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary-foreground: var(--custom-dark-gray);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -140,12 +135,39 @@
 
 
     }
+
+    --fancy-bg: linear-gradient(
+    45deg,
+    hsl(0 0% 11%) 60%,
+    hsl(200 24% 15%)70%,
+    hsl(0 0% 11%)80%
+        );
+
+    --fancy-bg-test: linear-gradient(to top left,#16222A,#3A6073)
 }
+
 
 
 @theme inline {
     --color-background: var(--background);
     --color-primary: var(--primary);
+    --color-primary-foreground : var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-nav: var(--nav);
 }
 /*
 :root {
@@ -233,10 +255,10 @@ html, body{
 }
 
 
-.content {
+/* .content {
     height: 100%;
     overflow-y: visible;
     a {
         color: var(--theme-secondary);
     }
-}
+} */

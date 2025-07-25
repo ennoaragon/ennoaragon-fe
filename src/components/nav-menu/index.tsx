@@ -7,7 +7,8 @@ import {
     twitterComButton,
     experienceButton,
     aboutButton,
-    projectsButton
+    projectsButton,
+    homeButton
 } from "./components/buttons"
 import { useTheme } from "@/components/theme-provider.tsx"
 
@@ -71,8 +72,8 @@ function NavMenu() {
                 </div>
             </div>
             <div className="h-full flex flex-row items-center justify-center text-center min-w-[200px] flex-1">
-                <Link to="/" >
-                    <h1 className="cursor-pointer text-xl">E</h1>
+                <Link to="/" className="cursor-pointer text-xl">
+                    { homeButton() }
                 </Link>
             </div>
             <div className="flex justify-center items-center space-x-4 md:space-x-10">

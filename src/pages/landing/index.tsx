@@ -8,7 +8,7 @@ function Landing() {
             <header className="fixed w-full h-[50px] bg-transparent z-10">
                 <NavMenu />
             </header>
-            <main className="min-h-screen overflow-y-auto relative "
+            <main className="mt-[50px] min-h-screen overflow-y-auto relative "
             >
                 <Outlet />
             </main>

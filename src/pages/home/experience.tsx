@@ -1,16 +1,43 @@
+import { useEffect, useState } from "react"
 import { jobs, iProject } from "@static/experience"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
+
+
 const Expereince = () => {
+    const [companies, setCompanies] = useState<Record<string, iProject>>({});
+    const [currentJob, setCurrentJob] = useState<string>("");
+
+    useEffect(() => {
+
+        processJobs()
+
+    }, [])
+
+    function processJobs() {
+
+        const temp: Record<string, iProject> = {};
+
+        jobs.forEach((job: iProject, i: number) => {
+            if (job.company !== undefined) {
+
+                temp[job.company] = job
+                if (i === 0) {
+                    setCurrentJob(job.company)
+                }
+            }
+        })
+
+        setCompanies(temp)
+    }
 
     function JobExp(job: iProject) {
         return (
-            <div key={job.description} className="rounded my-4 border-transparent box-border border-2
-        hover:border-(--theme-tertiary) hover:box-border hover:border-2
-        hover:bg-opacity-30 max-w-text-mobile-width-max md:w-text-width-max md:max-w-text-width-max text-wrap">
-                <div className="p-2">
+            <div key={job.description} className="rounded
+         max-w-text-mobile-width-max md:w-text-width-max md:max-w-text-width-max text-wrap">
+                <div className="">
                     <div className="flex flex-1 justify-between w-full items-center">
-                        <div className="my-2">
+                        <div className="">
                             <p className="text-xl md:text-3xl">{job.title}</p>
                             <p className="text-base md:text-lg ">{job.date}</p>
                         </div>
@@ -28,7 +55,7 @@ const Expereince = () => {
                         <div className="flex w-full flex-wrap" >
                             <ul className="list-disc">
                                 {
-                                    job.tasks.map(( task: string, i) =>
+                                    job.tasks.map((task: string, i) =>
                                         <li key={i} className=" rounded-md mt-4 mr-2 p-1">{task}</li>
                                     )
                                 }
@@ -38,10 +65,10 @@ const Expereince = () => {
                     }
                     <div className="flex w-full flex-wrap" >
 
-                        {job.more_links != undefined ? job.more_links.map((link: string,i) =>
+                        {job.more_links != undefined ? job.more_links.map((link: string, i) =>
                             <Tooltip key={i}>
                                 <TooltipTrigger>
-                                    <a  target="_blank" rel="noopener noreferrer" href={link} className=" my-2">
+                                    <a target="_blank" rel="noopener noreferrer" href={link} className=" my-2">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                                         </svg>
@@ -68,11 +95,40 @@ const Expereince = () => {
                                 }
                             </div> */
     }
+
+    function buttonExpereience( job: string) {
+        const isActive = job === currentJob
+
+        return (
+            <div key={job} onClick={() => setCurrentJob(job)}
+                className={`w-full ${ isActive ? 'bg-background' : '' } cursor-pointer hover:bg-background`}>
+                <p className="text-left m-2">{job}</p>
+            </div>
+        )
+    }
+
+
     return (
-        <div className="flex flex-col w-full h-full mt-10 max-w-(--text-mobile-width-max) md:w-(--text-width-max) md:max-w-(--text-width-max) text-wrap mx-auto">
-            <p className="text-4xl md:text-7xl text-left ">Experience</p>
-            <div className="flex flex-col  justify-center items-center">
-                {jobs.map((job: iProject) => JobExp(job))}
+        <div className="flex flex-col w-full h-full mt-10 max-w-(--text-mobile-width-max) justify-center items-center
+            md:w-(--text-width-max) md:max-w-(--text-width-max) text-wrap mx-auto">
+
+            <p className="text-4xl md:text-7xl sm:text-5xl text-left ">Experience</p>
+            <div className="grid grid-cols-3 gap-3 my-4">
+                <div className="col-span-2 md:col-span-1 ">
+                    <div className="flex flex-col p-1">
+                        {
+                            Object.keys(companies).map((key) =>
+                                buttonExpereience(key)
+                                //<p key={key} onClick={() => setCurrentJob(key)} className="text-left m-2">{key}</p>
+                            )
+                        }
+                    </div>
+                </div>
+                <div className="col-span-2">
+                    <div className="flex flex-col  justify-center items-center">
+                        {currentJob !== "" && JobExp(companies[currentJob])}
+                    </div>
+                </div>
             </div>
         </div>
     )

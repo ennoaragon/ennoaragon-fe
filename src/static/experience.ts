@@ -1,5 +1,6 @@
 export interface iProject{
     id: number,
+    company?: string,
     title: string,
     description: string,
     tasks: string[],
@@ -13,6 +14,7 @@ export interface iProject{
 export const jobs:iProject[] = [
     {
         id: 1,
+        company: "AppOnboard, Inc",
         title: "Full Stack Engineer",
         description: "Led the design and development of multiple critical systems, including an Asset Store and monetization system for user-generated content, an alerting system with detailed logging integrated with Elastic Search and Slack, and an Admin portal for internal support tools. Designed and implemented scalable APIs and improved the user experience for over 1,000,000 users across desktop and mobile.",
         tasks: [
@@ -30,6 +32,7 @@ export const jobs:iProject[] = [
     },
     {
         id: 2,
+        company: "Oregon Institute of Technology",
         title: "Teacher's Assistance",
         description:  "Graded student work for all levels of C++ courses, including advanced and Object Oriented Programming (OOP). I developed and evaluated assignments for the SQL and NoSql database course. Assess, assist, and encourage best coding practices.",
         tasks: [
