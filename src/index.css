@@ -4,6 +4,21 @@
 @custom-variant dark (&:where(.dark, .dark *));
 @custom-variant dark (&:is(.dark *));
 
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+}
 
 :root {
     --text-width-max: 600px;
@@ -20,6 +35,7 @@
     --custom-accent: #149ce3;
     --custom-background: #f0f0f0;
     --custom-nav-background: #FF7F50;
+    --custom-main-background: #fcf2ee;
     --custom-gradiant: #FF7F50;
     --custom-purple: #6A0DAD;
 

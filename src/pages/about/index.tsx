@@ -1,7 +1,6 @@
 
 const About = () => {
 
-
     const videoUrl = "https://storage.googleapis.com/ea-frontend-assets/jumbo_cam_heart.mp4"
     return (
         <div className="grid grid-cols-1 xl:grid-cols-1 gap-2 px-10 md:p-2 min-w-full w-full">

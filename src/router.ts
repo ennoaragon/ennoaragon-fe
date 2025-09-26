@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Home from "@pages/home";
 import MainLayout from "@pages/landing";
 import About from "@pages/about";
+import Gallery from "@pages/gallery";
 
 export const router = createBrowserRouter([
     {
@@ -10,6 +11,7 @@ export const router = createBrowserRouter([
         children: [
             { index: true, Component: Home },
             { path: "about", Component: About },
+            { path: "gallery", Component: Gallery},
             // {
             //   path: "auth",
             //   Component: AuthLayout,

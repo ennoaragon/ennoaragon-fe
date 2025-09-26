@@ -52,7 +52,7 @@ export const projects:iProject[] = [
     {
         id: 0,
         title: "Team fire cracker",
-        description: "Join an adventurous cat and its AI companion on a secret mission from Earth in this 2.5D platformer. The game aims to deliver an immersive experience, utilizing GPT-4 agents to craft engaging and interactive conversations between the characters, enhancing the overall gameplay and narrative depth.",
+        description: "Join an adventurous cat and its AI companion on a secret mission from Earth in this 2.5D platformer. The game aims to deliver an immersive experience, utilizing GPT agents to craft engaging and interactive conversations between the characters, enhancing the overall gameplay and narrative depth.",
         tasks: [],
         image_url: "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
         tech_chips: ["Unreal Engine 5", "c++", "Chat GPT", "python"],

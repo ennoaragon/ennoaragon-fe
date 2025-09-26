@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router"
+import {
+    Link,
+    useNavigate,
+} from "react-router"
 import {
     githubButton,
     linkedInButton,
@@ -18,7 +21,8 @@ function NavMenu() {
     const [visible, setVisible] = useState<boolean>(true);
     const scrollElement = document.body;
 
-    const { theme, setTheme } = useTheme()
+    const { theme, setTheme } = useTheme();
+    const navigate = useNavigate();
 
     useEffect(() => {
         let lastScrollTop = 0;
@@ -26,7 +30,6 @@ function NavMenu() {
         const handleScroll = () => {
 
             const currentScroll = scrollElement.scrollTop || 0; // || window.scrollY;
-            console.log(scrollElement)
 
             setScrolled(currentScroll > 50);
 
@@ -38,7 +41,6 @@ function NavMenu() {
 
             lastScrollTop = currentScroll;
         };
-
 
         if (scrollElement) {
             scrollElement.addEventListener('scroll', handleScroll, { passive: true });
@@ -52,7 +54,13 @@ function NavMenu() {
         };
     }, []);
 
+
     function scrollToSection(id: string) {
+        navigate({
+            pathname: "/",
+            hash: `#${id}`,
+        });
+
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth' });
@@ -73,7 +81,7 @@ function NavMenu() {
             </div>
             <div className="h-full flex flex-row items-center justify-center text-center min-w-[200px] flex-1">
                 <Link to="/" className="cursor-pointer text-xl">
-                    { homeButton() }
+                    {homeButton()}
                 </Link>
             </div>
             <div className="flex justify-center items-center space-x-4 md:space-x-10">
@@ -92,7 +100,8 @@ function NavMenu() {
                         </svg>
                     </button>
                 }
-                <Link className="hover:text-custom-accent-light text-lg"
+                {/*
+                    <Link className="hover:text-custom-accent-light text-lg"
                     to="/about">
                     <div className="flex justify-center items-center">
                         {aboutButton()}
@@ -100,7 +109,17 @@ function NavMenu() {
                             About
                         </span>
                     </div>
-                </Link>
+                    </Link>
+                */}
+
+                <button className="hover:text-custom-accent-light  text-lg cursor-pointer" onClick={() => scrollToSection("about")}>
+                    <div className="flex justify-center items-center">
+                        {aboutButton()}
+                        <span className="hidden md:block text-sm ">
+                            About
+                        </span>
+                    </div>
+                </button>
                 <button className="hover:text-custom-accent-light  text-lg cursor-pointer" onClick={() => scrollToSection("experience")}>
                     <div className="flex justify-center items-center">
                         {experienceButton()}
