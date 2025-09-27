@@ -47,7 +47,7 @@ function Home() {
                 </div>
             </section>
             </AuroraBackground>
-            <section id="about" className="content flex flex-col justify-center items-center min-h-screen text-left h-screen w-full">
+            <section id="about" className="content flex flex-col justify-center items-center min-h-[700px] h-fill text-left w-full">
                 <div className="max-w-(--text-mobile-width-max) md:w-(--text-width-max) md:max-w-(--text-width-max)" >
                     <p className="text-base mt-6">Hey, I’m Enno Aragon an ex pro-gamer turned programmer.</p>
                     <p className="text-base mt-6">When I'm not working on a project, you'll
@@ -58,10 +58,10 @@ function Home() {
                     </p>
                 </div>
             </section>
-            <section id="experience" className="content flex flex-col justify-center items-center min-h-screen text-left h-screen w-full">
+            <section id="experience" className="content flex flex-col justify-center items-center text-left min-h-[700px] h-fill w-full mb-[150px]">
                 <Expereince />
             </section>
-            <section id="projects" className="content flex flex-col justify-center items-center min-h-fill  text-left h-screen w-full">
+            <section id="projects" className="content flex flex-col justify-center items-center min-h-[700px] h-fill text-left w-full mb-[150px]">
                 <Projects />
             </section>
         </>

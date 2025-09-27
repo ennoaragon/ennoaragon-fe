@@ -96,12 +96,12 @@ const Expereince = () => {
                             </div> */
     }
 
-    function buttonExpereience( job: string) {
+    function buttonExpereience(job: string) {
         const isActive = job === currentJob
 
         return (
             <div key={job} onClick={() => setCurrentJob(job)}
-                className={`w-full ${ isActive ? 'bg-background' : '' } cursor-pointer hover:bg-background`}>
+                className={`w-full ${isActive ? 'bg-background' : ''} cursor-pointer hover:bg-background`}>
                 <p className="text-left m-2">{job}</p>
             </div>
         )
@@ -109,10 +109,10 @@ const Expereince = () => {
 
 
     return (
-        <div className="flex flex-col w-full h-full mt-10 max-w-(--text-mobile-width-max) justify-center items-center
-            md:w-(--text-width-max) md:max-w-(--text-width-max) text-wrap mx-auto">
+        <div className="flex flex-col w-full h-full mt-10 justify-center items-center
+            md:w-(--experience-max-width) max-w-(--experience-max-width) text-wrap mx-auto">
 
-            <p className="text-4xl md:text-7xl sm:text-5xl text-left ">Experience</p>
+            <p className="w-full text-fxl md:text-7xl sm:text-5xl text-left">Experience</p>
             <div className="grid grid-cols-3 gap-3 my-4">
                 <div className="col-span-2 md:col-span-1 ">
                     <div className="flex flex-col p-1">

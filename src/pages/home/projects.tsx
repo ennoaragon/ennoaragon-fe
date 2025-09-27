@@ -20,7 +20,7 @@ const Projects = () => {
                 <div className="flex w-full flex-wrap" >
                     {
                         p.tech_chips.map((techChip: string,i) =>
-                            <div key={i} className="bg-(--theme-tertiary) bg-opacity-40 text-black rounded-md mt-4 mr-2 p-1">
+                            <div key={i} className="font-thin text-sm mt-4 mr-2 p-1">
                                 <p className="">{techChip}</p>
                             </div>
                         )
@@ -31,8 +31,9 @@ const Projects = () => {
         )
     }
     return (
-        <div className="flex flex-col w-full mt-10 max-w-(--text-mobile-width-max) md:w-(--text-width-max) md:max-w-(--text-width-max) text-wrap mx-auto">
-            <p className="text-4xl md:text-7xl md:text-center ">Projects</p>
+        <div className="flex flex-col w-full h-full mt-10 justify-center items-center
+            md:w-(--projects-max-width) md:max-w-(--projects-max-width) max-w-(--projects-max-width) text-wrap mx-auto">
+            <p className="w-full text-fxl md:text-7xl sm:text-5xl text-left">Projects</p>
             <div className="flex flex-col  justify-center items-center">
                 {
                     projects.map((p: iProject) => project(p))
