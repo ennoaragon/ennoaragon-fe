@@ -23,7 +23,7 @@
 :root {
     --text-width-max: 600px;
     --projects-max-width: 1000px;
-    --experience-max-width: 700px;
+    --experience-max-width: 800px;
     --text-mobile-width-max: 375px;
     --text-color: black;
 
@@ -34,12 +34,16 @@
     --custom-gray: #c7c5c5;
     --active-link: #F0F0F0;
     --custom-accent: #1c282e;
-    --custom-accent: #149ce3;
+    --custom-accent-light: #149ce3;
     --custom-background: #f0f0f0;
     --custom-nav-background: #FF7F50;
     --custom-main-background: #fcf2ee;
     --custom-gradiant: #FF7F50;
     --custom-purple: #6A0DAD;
+
+    --custom-card: #fa9b78;
+    --custom-card-accent:  #EC9466;
+    --custom-card-accent2: #F8D0C1;
 
   --radius: 0.625rem;
   --background: var(--custom-nav-background);
@@ -100,11 +104,12 @@
     --custom-background-lighter: #f0f0f0;
     --custom-gradiant: #1c282e;
     --custom-purple: #6A0DAD;
-    --custom-gradiant: #1c282e;
     --custom-nav-background: oklch(0.3456 0.0139 226.4);
-
     --custom-dark-gray: oklch(0.3456 0.0139 226.4);
 
+    --custom-card: var(--custom-nav-background);
+    --custom-card-accent: var(--custom-background);
+    --custom-card-accent2: var(--custom-background);
 
   --background: var(--custom-nav-background);
   --foreground: oklch(0.985 0 0);

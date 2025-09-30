@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react"
-import { jobs, iProject } from "@static/experience"
+import { jobs, type iExperience } from "@static/experience"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
 
 
 const Expereince = () => {
-    const [companies, setCompanies] = useState<Record<string, iProject>>({});
+    const [companies, setCompanies] = useState<Record<string, iExperience>>({});
     const [currentJob, setCurrentJob] = useState<string>("");
 
     useEffect(() => {
@@ -16,9 +16,9 @@ const Expereince = () => {
 
     function processJobs() {
 
-        const temp: Record<string, iProject> = {};
+        const temp: Record<string, iExperience> = {};
 
-        jobs.forEach((job: iProject, i: number) => {
+        jobs.forEach((job: iExperience, i: number) => {
             if (job.company !== undefined) {
 
                 temp[job.company] = job
@@ -31,7 +31,7 @@ const Expereince = () => {
         setCompanies(temp)
     }
 
-    function JobExp(job: iProject) {
+    function JobExp(job: iExperience) {
         return (
             <div key={job.description} className="rounded
          max-w-text-mobile-width-max md:w-text-width-max md:max-w-text-width-max text-wrap">
