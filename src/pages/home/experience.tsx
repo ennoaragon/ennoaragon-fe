@@ -33,8 +33,7 @@ const Expereince = () => {
 
     function JobExp(job: iExperience) {
         return (
-            <div key={job.description} className="rounded
-         max-w-text-mobile-width-max md:w-text-width-max md:max-w-text-width-max text-wrap">
+            <div key={job.description} className="rounded max-w-text-mobile-width-max md:w-text-width-max md:max-w-text-width-max text-wrap">
                 <div className="">
                     <div className="flex flex-1 justify-between w-full items-center">
                         <div className="">
