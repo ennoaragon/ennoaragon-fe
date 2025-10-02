@@ -31,10 +31,11 @@
     --theme-primary: black;
     --theme-secondary: #FF7F50;
     --theme-tertiary: #126794;
+    --theme-tertiary-light: #149ce3;
     --custom-gray: #c7c5c5;
     --active-link: #F0F0F0;
     --custom-accent: #1c282e;
-    --custom-accent-light: #149ce3;
+    --custom-accent-light: #4a5565;
     --custom-background: #f0f0f0;
     --custom-nav-background: #FF7F50;
     --custom-main-background: #fcf2ee;
@@ -44,6 +45,12 @@
     --custom-card: #fa9b78;
     --custom-card-accent:  #EC9466;
     --custom-card-accent2: #F8D0C1;
+
+    p {
+        a {
+            color: var(--custom-card-accent);
+        }
+    }
 
   --radius: 0.625rem;
   --background: var(--custom-nav-background);
@@ -95,11 +102,11 @@
     --theme-primary: white;
     --theme-secondary: #FF7F50;
     --theme-tertiary: #126794;
+    --theme-tertiary-light: #149ce3;
     --custom-gray: #c7c5c5;
     --active-link: #F0F0F0;
     --custom-accent: #1c282e;
-    --custom-accent-light: #149ce3;
-
+    --custom-accent-light: #4a5565;
     --custom-background: #1b1b1b;
     --custom-background-lighter: #f0f0f0;
     --custom-gradiant: #1c282e;
@@ -110,6 +117,13 @@
     --custom-card: var(--custom-nav-background);
     --custom-card-accent: var(--custom-background);
     --custom-card-accent2: var(--custom-background);
+
+    p {
+        a {
+            color: var(--theme-tertiary-light);
+        }
+    }
+
 
   --background: var(--custom-nav-background);
   --foreground: oklch(0.985 0 0);

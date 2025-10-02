@@ -19,8 +19,6 @@ const Projects = () => {
         return (
             <>
                 <div className={`${order} z-1`}>
-                    <div className="flex-col items-center justify-center">
-                    </div>
                     <div key={p.id} className="p-4 bg-gradient-to-tr to-(--custom-card-accent2)  via-(--custom-card) from-(--custom-card-accent) rounded-lg z-1">
                         <div className={`flex flex-1 justify-between w-full ${ first?"":"flex-row-reverse"}`}>
                             <p className="text-xl md:text-3xl my-2 ">{p.title}</p>

@@ -33,23 +33,21 @@ function Home() {
     return (
         < >
             <AuroraBackground>
-            <section className="content flex flex-col justify-center items-center min-h-screen text-left h-screen w-full">
-                <div className="max-w-(--text-mobile-width-max) md:w-(--text-width-max) md:max-w-(--text-width-max) ">
-                    <div className="text-left">
-                        <p className="text-4xl md:text-7xl">Enno Aragon</p>
+                <section className="content flex flex-col justify-center items-center min-h-screen text-left h-screen w-full">
+                    <div className="max-w-(--text-mobile-width-max) md:w-(--text-width-max) md:max-w-(--text-width-max) ">
+                        <div className="text-left">
+                            <p className="text-4xl md:text-7xl">Enno Aragon</p>
+                        </div>
+                        <p className="text-base mt-6">
+                            I’m a software engineer honing skills by developing desktop and web applications that enhance
+                            UX, including CLI tools, and Discord D&D for my friends and I.
+                            Currently, I’m focused on building a physics engine for my game that will utilize AI.
+                        </p>
                     </div>
-                    <p className="text-base mt-6">I'm focused on honing my engineering
-                        skills by developing desktop and web applications that enhance
-                        UX, including CLI tools, and Discord bots for D&D for friends.
-                        I'm also exploring video game development. Each project refines
-                        my skills and broadens my perspective. Learn more about my personal projects
-                        <button  onClick={() => scrollToSection("projects")}>here</button>.
-                    </p>
-                </div>
-            </section>
+                </section>
             </AuroraBackground>
             <section id="about" className="content flex flex-col justify-center items-center min-h-[700px] h-fill text-left w-full">
-                <About/>
+                <About />
             </section>
             <section id="experience" className="content flex flex-col justify-center items-center text-left min-h-[700px] h-fill w-full mb-[150px]">
                 <Expereince />
