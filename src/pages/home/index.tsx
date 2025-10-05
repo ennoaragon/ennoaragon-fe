@@ -34,12 +34,20 @@ function Home() {
         < >
             <AuroraBackground>
                 <section className="content flex flex-col justify-center items-center min-h-screen text-left h-screen w-full">
-                    <div className="max-w-(--text-mobile-width-max) md:w-(--text-width-max) md:max-w-(--text-width-max) ">
-                        <div className="text-left">
+                    <div className="max-w-(--text-mobile-width-max) md:w-(--text-width-max) md:max-w-(--text-width-max) text-base">
+                        <div className="text-left w-full">
                             <p className="text-4xl md:text-7xl">Enno Aragon</p>
                         </div>
-                        <p className="text-base mt-6">
-                            I’m a software engineer honing skills by developing desktop and web applications that enhance
+
+                        <p className="my-6 z-1 text-base "> With over three years of professional experience in Full-Stack Development, I
+                            have a solid background in TypeScript, React.js, and NestJS. I also have
+                            hands-on experience with AWS and various cloud services. I am comfortable
+                            in a startup environment with a self-starter mentality, problem solving skills,
+                            able to take ownership of new features and work efficiently to move on to the
+                            next task.
+                        </p>
+                        <p className="my-6 text-base">
+                            I've honed skills by developing desktop and web applications that enhance
                             UX, including CLI tools, and Discord D&D for my friends and I.
                             Currently, I’m focused on building a physics engine for my game that will utilize AI.
                         </p>

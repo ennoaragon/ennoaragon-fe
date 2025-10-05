@@ -15,18 +15,18 @@ const Projects = () => {
     }
 
     function projectContent(p: iProject, first: boolean) {
-        const order = first ? "row-span-full col-start-1 col-span-5 self-center" : "row-span-full col-span-6 col-end-12 self-center text-right"
+        const order = first ? "row-span-full col-start-1 col-span-5 self-center" : "row-span-full col-span-6 col-end-12 self-center"
         return (
             <>
                 <div className={`${order} z-1`}>
                     <div key={p.id} className="p-4 bg-gradient-to-tr to-(--custom-card-accent2)  via-(--custom-card) from-(--custom-card-accent) rounded-lg z-1">
-                        <div className={`flex flex-1 justify-between w-full ${ first?"":"flex-row-reverse"}`}>
+                        <div className={`flex flex-1 justify-between w-full `}>
                             <p className="text-xl md:text-3xl my-2 ">{p.title}</p>
                             <div className="flex flex-row items-center mr-2">
                                 {
                                     //p.github_url.length > 0
                                     p.github_url.length === 0 ?
-                                        <a target="_blank" rel="noopener noreferrer" href={p.github_url} className=" my-2 mr-4">
+                                        <a target="_blank" rel="noopener noreferrer" href={p.github_url} className="my-2 mr-4 projects-external-link">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
                                                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                                                 <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -43,8 +43,8 @@ const Projects = () => {
                                         //    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
                                         //</svg>
                                     p.external_url.length > 0 ?
-                                    <a target="_blank" rel="noopener noreferrer" href={p.external_url} className=" my-2">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+                                    <a target="_blank" rel="noopener noreferrer" href={p.external_url} className="my-2 projects-external-link">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6 ">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                                         </svg>
                                     </a>

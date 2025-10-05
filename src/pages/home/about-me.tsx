@@ -12,20 +12,26 @@ function AboutMe() {
                     <p className="text-base">Hey, I’m Enno Aragon an ex pro-gamer turned programmer.
                     </p>
                     <p className="text-sm text-(--custom-accent-light)"> Learn more about my gaming career
-                        <a href="about"> {" "} here.</a>
-                    </p>
-                    <p className="text-base my-4"> With over three years of professional experience in Full-Stack Development, I
-                        have a solid background in TypeScript, React.js, and NestJS. I also have
-                        hands-on experience with AWS and various cloud services. I am comfortable
-                        in a startup environment with a self-starter mentality, problem solving skills,
-                        able to take ownership of new features and work efficiently to move on to the
-                        next task.
+                        <a href="about">&nbsp;here.</a>
                     </p>
 
+                    <p className="my-4 text-base relative">
+                        I started programming back in 2016. My first project was
+                        a website for my father’s business, finding the
+                        complexities of backend and frontend development both challenging
+                        and captivating. Shortly after, my eSports career took off, you can
+                        read more about it<a href="about">&nbsp;here</a>.
+                        Over the years, I've developed software during my content creation
+                        and<a target="_blank" rel="noopener noreferrer" href="https://www.twitch.tv/idropbodies_tv" >&nbsp;gaming days</a>, worked at a
+                        <a href="https://signup.buildbox.com/">&nbsp;startup</a>,
+                        and tackled ambitious projects at
+                        <a target="_blank" rel="noopener noreferrer" href="https://idropstudios.com"
+                        >&nbsp;iDropStudios</a>.
+                    </p>
                     <p className="text-base my-4">I'm also exploring video game development.
                         I am a firm believer of game engines being one of the toughest projects to implement.
                         Currently, I’m focused on building a physics engine for my game that utilizes AI with co-op/versus features.
-                        Each project refines my skills and broadens my perspective. Learn more about my personal projects <a href="#projects">&nbsp;here</a>.
+                        Each project refines my skills and broadens my perspective. Learn more about my personal projects<a href="#projects">&nbsp;here</a>.
                     </p>
                     <p >
                         Here are a few technologies I’ve been working with recently:

@@ -32,12 +32,13 @@
     --theme-secondary: #FF7F50;
     --theme-tertiary: #126794;
     --theme-tertiary-light: #149ce3;
+    --theme-accent-light: #828de1;
     --custom-gray: #c7c5c5;
     --active-link: #F0F0F0;
     --custom-accent: #1c282e;
     --custom-accent-light: #4a5565;
     --custom-background: #f0f0f0;
-    --custom-nav-background: #FF7F50;
+    --custom-nav-background: #EC9466;
     --custom-main-background: #fcf2ee;
     --custom-gradiant: #FF7F50;
     --custom-purple: #6A0DAD;
@@ -52,6 +53,13 @@
         }
     }
 
+    .external-link:hover {
+        color: var(--custom-card-accent);
+    }
+
+    .projects-external-link:hover {
+        color: white;
+    }
   --radius: 0.625rem;
   --background: var(--custom-nav-background);
   --foreground: oklch(0.145 0 0);
@@ -115,8 +123,13 @@
     --custom-dark-gray: oklch(0.3456 0.0139 226.4);
 
     --custom-card: var(--custom-nav-background);
-    --custom-card-accent: var(--custom-background);
     --custom-card-accent2: var(--custom-background);
+    --custom-card-accent: #142438;
+
+    /*--custom-card: var(--custom-nav-background);
+    --custom-card-accent2: var(--custom-background);
+    --custom-card-accent2: #142438; */
+
 
     p {
         a {
@@ -124,6 +137,9 @@
         }
     }
 
+    .external-link:hover {
+        color: var(--theme-tertiary-light);
+    }
 
   --background: var(--custom-nav-background);
   --foreground: oklch(0.985 0 0);
@@ -299,3 +315,19 @@ html, body{
         color: var(--theme-secondary);
     }
 } */
+
+@font-face {
+  font-family: 'dune';
+  src: url('/src/assets/fonts/Dune_Rise.woff2') format('woff2');
+  /* Add more formats for broader compatibility */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'birdman';
+  src: url('/src/assets/fonts/birdman.woff2') format('woff2');
+  /* Add more formats for broader compatibility */
+  font-weight: normal;
+  font-style: normal;
+}

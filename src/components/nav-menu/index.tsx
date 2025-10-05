@@ -67,24 +67,27 @@ function NavMenu() {
         }
     };
 
+            //<div className="mx-2 h-full flex flex-row items-center justify-center text-center">
+            //    <div className="flex items-center">
+            //        <a target="_blank" rel="noopener noreferrer" href="https://github.com/ennoaragon" className=" text-2xl">{githubButton()}</a>
+            //        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ennoaragon" className=" text-2xl">{linkedInButton()}</a>
+            //        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ennoaragon" className=" text-2xl">{instaButton()}</a>
+            //        <a target="_blank" rel="noopener noreferrer" href="https://x.com/ennoaragon" className=" text-2xl">{twitterComButton()}</a>
+            //    </div>
+            //</div>
+
     return (
         <nav className={`fixed w-full top-0 left-0 right-0 h-14 flex flex-row transition-transform duration-300 ease-out
             z-50 ${scrolled ? 'bg-background' : 'bg-transparent'}
             ${visible ? 'translate-y-0' : '-translate-y-full'} `}>
-            <div className="mx-2 h-full flex flex-row items-center justify-center text-center">
-                <div className="flex items-center">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/ennoaragon" className=" text-2xl">{githubButton()}</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ennoaragon" className=" text-2xl">{linkedInButton()}</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ennoaragon" className=" text-2xl">{instaButton()}</a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://x.com/ennoaragon" className=" text-2xl">{twitterComButton()}</a>
-                </div>
-            </div>
-            <div className="h-full flex flex-row items-center justify-center text-center min-w-[200px] flex-1">
-                <Link to="/" className="cursor-pointer text-xl">
+            <div className="h-full flex flex-row items-center justify-center text-center flex-1">
+                <Link to="/" className="text-2xl font-[dune]">Enno</Link>
+                { /*<Link to="/" className="cursor-pointer text-xl">
                     {homeButton()}
                 </Link>
+                */}
             </div>
-            <div className="flex justify-center items-center space-x-4 md:space-x-10">
+            <div className="flex justify-center items-center flex-1">
                 {theme === "dark" ?
 
                     <button onClick={() => setTheme("light")} className="cursor-pointer">
@@ -100,6 +103,8 @@ function NavMenu() {
                         </svg>
                     </button>
                 }
+            </div>
+            <div className="flex justify-center items-center space-x-4 md:space-x-10 flex-1">
                 {/*
                     <Link className="hover:text-custom-accent-light text-lg"
                     to="/about">

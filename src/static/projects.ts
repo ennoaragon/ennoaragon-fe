@@ -52,7 +52,7 @@ export const projects:iProject[] = [
         image_src: "https://tenor.com/view/kitty-cat-sandwich-cats-sandwich-gif-26112528",
         tech_chips: ["React", "zustand", "GO", "Tailwindcss","AWS"],
         date: "2021-09-01",
-        external_url: "",
+        external_url: "https://swapcanvas.com",
         github_url: "",
         local_src: "src/assets/swapcanvas.webp",
         video_src: "",
