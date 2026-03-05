@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { jobs, type iExperience } from "@static/experience"
+import { jobs, type iExperience } from "@/static/experience"
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 
 

@@ -10,36 +10,6 @@
         ],
         "module": "ESNext",
         "skipLibCheck": true,
-        "paths": {
-            "baseUrl": ".",
-            "@/*": [
-                "./src/*"
-            ],
-            "@assets/*": [
-                "src/assets/*"
-            ],
-            "@components/*": [
-                "src/components/*"
-            ],
-            "@hooks/*": [
-                "src/hooks/*"
-            ],
-            "@pages/*": [
-                "src/pages/*"
-            ],
-            "@store/*": [
-                "src/store/*"
-            ],
-            "@static/*": [
-                "src/static/*"
-            ],
-            "@styles/*": [
-                "src/styles/*"
-            ],
-            "@utils/*": [
-                "src/utils/*"
-            ]
-        },
         /* Bundler mode */
         "moduleResolution": "bundler",
         "allowImportingTsExtensions": true,
@@ -53,7 +23,14 @@
         "noUnusedParameters": true,
         "erasableSyntaxOnly": true,
         "noFallthroughCasesInSwitch": true,
-        "noUncheckedSideEffectImports": true
+        "noUncheckedSideEffectImports": true,
+
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ]
+        }
     },
     "include": [
         "src"
