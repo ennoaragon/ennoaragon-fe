@@ -52,7 +52,7 @@ function AboutMe() {
                 </div>
 
                 <div className="w-full col-span-1">
-                    <img src="https://media1.tenor.com/m/fTTVgygGDh8AAAAd/kitty-cat-sandwich.gif" alt="img" />
+                    <img src={import.meta.env.ENV_MODE === "production" ? "https://media.licdn.com/dms/image/v2/C4E03AQGQMEwCkTSsPA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1611106378582?e=1774483200&v=beta&t=rEDHhOTyAicPjB0Oqb4OfmbPBN0KqhyoVKpWIHTqQIg" : "https://media1.tenor.com/m/fTTVgygGDh8AAAAd/kitty-cat-sandwich.gif"} alt="img" />
                 </div>
             </div>
 
