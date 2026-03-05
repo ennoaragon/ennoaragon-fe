@@ -8,30 +8,6 @@
         "paths": {
             "@/*": [
                 "./src/*"
-            ],
-            "@assets/*": [
-                "src/assets/*"
-            ],
-            "@components/*": [
-                "src/components/*"
-            ],
-            "@hooks/*": [
-                "src/hooks/*"
-            ],
-            "@pages/*": [
-                "src/pages/*"
-            ],
-            "@store/*": [
-                "src/store/*"
-            ],
-            "@static/*": [
-                "src/static/*"
-            ],
-            "@styles/*": [
-                "src/styles/*"
-            ],
-            "@utils/*": [
-                "src/utils/*"
             ]
         }
     },

@@ -7,28 +7,10 @@
         ],
         "module": "ESNext",
         "skipLibCheck": true,
+        "baseUrl": ".",
         "paths": {
-            "baseUrl": ".",
-            "@assets/*": [
-                "src/assets/*"
-            ],
-            "@components/*": [
-                "src/components/*"
-            ],
-            "@hooks/*": [
-                "src/hooks/*"
-            ],
-            "@pages/*": [
-                "src/pages/*"
-            ],
-            "@store/*": [
-                "src/store/*"
-            ],
-            "@styles/*": [
-                "src/styles/*"
-            ],
-            "@utils/*": [
-                "src/utils/*"
+            "@/*": [
+                "./src/*"
             ]
         },
         /* Bundler mode */
@@ -43,7 +25,7 @@
         "noUnusedParameters": true,
         "erasableSyntaxOnly": true,
         "noFallthroughCasesInSwitch": true,
-        "noUncheckedSideEffectImports": true,
+        "noUncheckedSideEffectImports": true
     },
     "include": [
         "vite.config.ts"

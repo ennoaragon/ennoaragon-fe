@@ -1,5 +1,5 @@
 import React from "react"
-import { projects, type iProject } from "@static/projects"
+import { projects, type iProject } from "@/static/projects"
 
 const Projects = () => {
 

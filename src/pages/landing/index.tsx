@@ -1,4 +1,4 @@
-import NavMenu from "@components/nav-menu"
+import NavMenu from "@/components/nav-menu"
 import { Outlet } from "react-router"
 
 function Landing() {

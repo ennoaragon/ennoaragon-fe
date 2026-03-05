@@ -1,7 +1,7 @@
 import {
     galleryPhotos,
-    iPhoto
-} from "@static/gallery_photos";
+    type iPhoto
+} from "@/static/gallery_photos";
 
 
 
