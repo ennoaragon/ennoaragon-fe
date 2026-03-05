@@ -4,14 +4,9 @@ import {
     useNavigate,
 } from "react-router"
 import {
-    githubButton,
-    linkedInButton,
-    instaButton,
-    twitterComButton,
     experienceButton,
     aboutButton,
     projectsButton,
-    homeButton
 } from "./components/buttons"
 import { useTheme } from "@/components/theme-provider.tsx"
 
