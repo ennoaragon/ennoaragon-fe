@@ -9,7 +9,7 @@ const Projects = () => {
         return (
 
             <div className={`${order} z-0 `}>
-                <img className="object-cover rounded-lg" src={import.meta.env.ENV_MODE === "production"? p.image_src : p.local_src} alt={p.title} />
+                <img className="object-cover rounded-lg" src={import.meta.env.VITE_ENV_MODE === "production"? p.image_src : p.local_src} alt={p.title} />
             </div>
         )
     }
