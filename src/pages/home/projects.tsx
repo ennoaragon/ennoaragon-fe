@@ -25,7 +25,7 @@ const Projects = () => {
                             <div className="flex flex-row items-center mr-2">
                                 {
                                     //p.github_url.length > 0
-                                    p.github_url.length === 0 ?
+                                    p.github_url.length > 0 ?
                                         <a target="_blank" rel="noopener noreferrer" href={p.github_url} className="my-2 mr-4 projects-external-link">
                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-5">
                                                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
