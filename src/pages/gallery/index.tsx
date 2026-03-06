@@ -19,7 +19,7 @@ const Gallery = () => {
                     </div>
                 </div>
                 {
-                    import.meta.env.ENV_MODE === "prod" ?
+                    import.meta.env.VITE_ENV_MODE === "production" ?
                         <img className="w-full rounded" src={image.remoteSrc} alt={image.title} />
                         :
                         <img className="w-full rounded" src={image.localSrc} alt={image.title} />
