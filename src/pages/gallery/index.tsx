@@ -48,7 +48,7 @@ const ExpandableGallery = () => {
                         >
 
                             {
-                                import.meta.env.ENV_MODE === "prod" ?
+                                import.meta.env.ENV_MODE === "production" ?
                                     <img
                                         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out hover:scale-105"
                                         src={image.remoteSrc} alt={image.title} />
